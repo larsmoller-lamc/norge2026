@@ -30,13 +30,13 @@ window.DAYS = [
   },
   {
     date: '2026-07-23', weekday: 'Tor', day: 23, month: 'JUL',
-    title: 'På opdagelse lokalt',
-    subtitle: 'Vi udforsker området nær hytten',
+    title: 'Let dag lokalt',
+    subtitle: 'Vandfald, klatrepark og kano',
     activities: [
-      { time: 'Formiddag', title: 'Vandretur i Sinnes-området', desc: 'Kort, familievenlig tur med mulighed for at se ned over Sirdalsvatnet. Se også <a href="https://www.sirdalsferie.no/" target="_blank" rel="noopener">Sirdalsferie</a> for ruteforslag.', tags: ['vandring', 'sol'] },
-      { time: 'Frokost', title: 'Madpakke i det fri', desc: 'Vi spiser på en stor flad sten med udsigt — kun naturen som restaurant.', tags: ['mad'] },
-      { time: 'Eftermiddag', title: 'Aktivitetsvalg: Disc-golf, mini-golf eller fjellgolf', desc: 'Familier kan splitte sig op. <a href="https://www.sirdalsferie.no/aktiviteter" target="_blank" rel="noopener">Sirdal har flere baner</a> — fjellgolfen ved Tjørholmfjellet er en oplevelse.', tags: ['aktivitet'] },
-      { time: 'Aften', title: 'Grillaften: Kyllingespyd & pølser', desc: 'Mette & Lars har madansvar. Sommersalat, hjemmebagt focaccia og brændt majskolbe på siden.', tags: ['mad'] }
+      { time: 'Formiddag', title: 'Kort vandring til Dorgefossen', desc: 'Spektakulært vandfald i en dyb kløft, ca. 30 min fra hytten. Kort gåtur fra p-plads til udsigtsplatform. Picnicborde og "Håvardsteinen" — en 3.200 kg sten som en stærk sirdøl angiveligt løftede med håndkraft.', tags: ['vandring', 'sol'] },
+      { time: 'Frokost', title: 'Madpakke på klipperne', desc: 'Vi spiser ved Dorgefossen med udsigt til vandfaldet — kun naturen som restaurant.', tags: ['mad'] },
+      { time: 'Eftermiddag', title: 'Sirdal Fjellpark: split-op', desc: 'Aktivitetscentret ved Tjørholmfjellet — klatrepark, mountain carts, frisbee-golf eller kano/SUP på søen. Familierne kan splitte op efter humør. Ca. 10 min fra hytten.', tags: ['aktivitet'] },
+      { time: 'Aften', title: 'Grillaften: Ørred eller laks + pølser', desc: 'Mette & Lars har madansvar. Fisken pakkes ind i folie med citron, dild og smør — pølser og hjemmebagt focaccia på siden. Nye kartofler og sommersalat.', tags: ['mad'] }
     ]
   },
   {
@@ -44,11 +44,11 @@ window.DAYS = [
     title: 'Lysefjorden',
     subtitle: 'Den store sejltur',
     activities: [
-      { time: 'Morgen', title: 'Tidlig morgenmad', desc: 'Vi spiser tidligt for at nå færgen til Lysefjorden.', tags: ['mad'] },
-      { time: 'Formiddag', title: 'Kør til Lauvvik eller Forsand', desc: '~1 time fra hytten. Her starter fjordcruiserne.', tags: ['kørsel'] },
-      { time: '11–14', title: 'Fjordcruise på Lysefjorden', desc: 'En af verdens smukkeste fjorde — tæt på Preikestolen fra vandet, vandfald og Kjeragmassivet. Se priser hos <a href="https://www.rodne.no/en/lysefjorden-cruise-2/" target="_blank" rel="noopener">Rødne Fjord Cruise</a>.', tags: ['oplevelse', 'sol'] },
-      { time: 'Eftermiddag', title: 'Bad i fjorden', desc: 'Stop ved Helleren eller en lille bugt undervejs hjem. Iskoldt — men friskt!', tags: ['bad'] },
-      { time: 'Aften', title: 'Aftensmad: Lasagne med hjemmelavet salat', desc: 'Camilla & Morten har madansvar. Stor portion til alle 16, med hvidløgsbrød og grov salat.', tags: ['mad'] }
+      { time: 'Morgen', title: 'Tidlig morgenmad', desc: 'Vi spiser tidligt for at nå cruiset fra Stavanger.', tags: ['mad'] },
+      { time: 'Formiddag', title: 'Kør til Stavanger', desc: '~1½ time. Rødne Fjord Cruise afgår fra Strandkaien i centrum.', tags: ['kørsel'] },
+      { time: '11–14', title: 'Fjordcruise på Lysefjorden', desc: 'Sejlads på eldrevet katamaran forbi Fantahålå (fredløseshule), Hengjanefossen-vandfaldet og Preikestolen set fra vandet. 3-3½ timer. <a href="https://rodne.no/en/fjord-experiences/stavanger/fjordcruise-lysefjord-preikestolen/" target="_blank" rel="noopener">Rødne Fjord Cruise</a>.', tags: ['oplevelse', 'sol'] },
+      { time: 'Eftermiddag', title: 'Slik-stop på vejen hjem', desc: 'Forsyn dig med norsk slik i en Joker eller Coop — det er bare bedre end det danske.', tags: ['hygge'] },
+      { time: 'Aften', title: 'Aftensmad: Norske "kjøttkaker" i brun sovs', desc: 'Camilla & Morten har madansvar. Norges svar på frikadeller — hakket oksekød med muskatnød, serveret med brun sovs, kogte kartofler og tyttebærsyltetøj. Klassisk norsk husmandskost.', tags: ['mad'] }
     ]
   },
   {
@@ -56,10 +56,10 @@ window.DAYS = [
     title: 'Preikestolen',
     subtitle: 'Den ikoniske vandring (for dem der vil)',
     activities: [
-      { time: 'Tidlig morgen', title: 'Afgang for vandregruppen', desc: 'De vandrelystne kører til Preikestolen Fjellstue (parkering). Ca. 1t 45min fra hytten.', tags: ['kørsel', 'vandring'] },
-      { time: '8–14', title: 'Vandring til Preikestolen', desc: '8 km t/r, ca. 4 timer. Stigning 500m. Børn fra 8-9 år kan klare det. <a href="https://www.visitnorway.no/reisemal/fjord-norge/lysefjorden/preikestolen/" target="_blank" rel="noopener">Info hos VisitNorway</a>.', tags: ['vandring', 'sol'] },
-      { time: 'Hele dagen', title: 'Alternativ: Hyggedag på hytten', desc: 'For dem der bliver hjemme: bad i Sirdalsvatnet, brætspil, læsning og en god lang frokost.', tags: ['hygge'] },
-      { time: 'Aften', title: 'Aftensmad: Fiskefrikadeller m. persillesovs', desc: 'Gitte & Chresten har madansvar. Dansk klassiker med nye kartofler, rugbrød og kolde øl.', tags: ['mad'] }
+      { time: 'Tidlig morgen', title: 'Afgang for vandregruppen', desc: 'De vandrelystne kører til Preikestolen Basecamp (parkering, 250 NOK/dag). Ca. 1t 45min fra hytten. Start tidligt for at undgå de værste menneskemængder.', tags: ['kørsel', 'vandring'] },
+      { time: '8–14', title: 'Vandring til Preikestolen', desc: '8 km t/r, ca. 4 timer. 500m stigning på godt tilrettelagt sherpa-sti med trin. Børn fra 5-6 år kan klare det med gode sko. <a href="https://www.visitnorway.com/places-to-go/fjord-norway/ryfylke/the-lysefjord-area/hiking-to-preikestolen/" target="_blank" rel="noopener">Info hos VisitNorway</a>.', tags: ['vandring', 'sol'] },
+      { time: 'Hele dagen', title: 'Alternativ: Hyggedag på hytten', desc: 'For dem der bliver hjemme: bad i Sinnes vandpark (5 min væk), brætspil på terrassen, læsning og en god lang frokost. Turen til Preikestolen er ikke for alle — og en dovendag i fjeldet er også en oplevelse.', tags: ['hygge'] },
+      { time: 'Aften', title: 'Restaurant-aften ude 🍽', desc: 'Vi spiser ude — vandregruppen kan tage en tidlig middag i Stavanger på vejen hjem, eller vi mødes alle 16 i Sirdal. Sinnes Fjellstue eller Slottet er lokale muligheder med god udsigt.', tags: ['mad'] }
     ]
   },
   {
@@ -67,34 +67,34 @@ window.DAYS = [
     title: 'Stavanger',
     subtitle: 'Bytur med oljemuseum',
     activities: [
-      { time: 'Formiddag', title: 'Kør til Stavanger', desc: '~1½ time. Park i centrum og gå rundt i Gamle Stavanger med de hvide træhuse.', tags: ['kørsel'] },
-      { time: 'Frokost', title: 'Frokost i Stavanger', desc: 'Børnevenlig café eller fish &amp; chips ved havnen.', tags: ['mad'] },
-      { time: 'Eftermiddag', title: 'Norsk Oljemuseum', desc: 'Interaktivt og rigtig spændende for både børn og voksne. <a href="https://www.norskolje.museum.no/en/" target="_blank" rel="noopener">norskolje.museum.no</a>.', tags: ['indendørs', 'kultur'] },
-      { time: 'Sen eftermiddag', title: 'Slik &amp; is på vejen hjem', desc: 'Stop ved en købmand og forsyn dig med norsk slik (det er bare bedre).', tags: ['hygge'] },
-      { time: 'Aften', title: 'Restaurant-aften 🍽', desc: 'Vi spiser ude — find et sted i Stavanger inden vi kører hjem, eller en lokal restaurant i Sirdal.', tags: ['mad'] }
+      { time: 'Formiddag', title: 'Kør til Stavanger', desc: '~1½ time. Park i centrum og gå rundt i Gamle Stavanger — 173 fredede hvide træhuse fra 1700-tallet og brostensgader.', tags: ['kørsel'] },
+      { time: 'Frokost', title: 'Frokost ved havnen', desc: 'Fish &amp; chips ved fiskemarkedet, eller børnevenlig café i Øvre Holmegate ("Fargegata") med regnbue-facader.', tags: ['mad'] },
+      { time: 'Eftermiddag', title: 'Norsk Oljemuseum', desc: 'Interaktivt museum — bygningen ligner selv en boreplatform. Rutsjebane, katastrofe-rum og klatre-platform for børnene. Voksne 180 NOK, børn 4-16 år 60 NOK, familie 420 NOK. <a href="https://www.norskolje.museum.no/en/" target="_blank" rel="noopener">norskolje.museum.no</a>.', tags: ['indendørs', 'kultur'] },
+      { time: 'Sen eftermiddag', title: 'Kør tilbage til hytten', desc: 'Stop evt. ved en Coop og fyld op med aftensmad-ingredienser.', tags: ['kørsel'] },
+      { time: 'Aften', title: 'Aftensmad: Pasta carbonara', desc: 'Gitte & Chresten har madansvar. Ægte italiensk carbonara med guanciale (eller bacon), pecorino, æggeblomme og masser af friskkværnet peber. Grov salat og hvidløgsbrød ved siden. Nemt at lave i store portioner efter en lang dag.', tags: ['mad'] }
     ]
   },
   {
     date: '2026-07-27', weekday: 'Man', day: 27, month: 'JUL',
-    title: 'Kjeragbolten & Lysevegen',
-    subtitle: 'Eventyrlystens dag',
+    title: 'Mixet fjelddag',
+    subtitle: 'Køretur, top og adrenalin',
     activities: [
-      { time: 'Tidlig', title: 'Afgang mod Kjerag', desc: 'Kør Lysevegen — én af Norges mest spektakulære veje med 27 hårnålesving. Ca. 1½t.', tags: ['kørsel'] },
-      { time: 'Formiddag', title: 'Vandring til Kjeragbolten', desc: 'Den berømte sten klemt mellem to klipper 1000m over fjorden. Turen er 11 km t/r, krævende. <a href="https://www.visitnorway.no/listings/kjeragbolten/19737/" target="_blank" rel="noopener">Info hos VisitNorway</a>.', tags: ['vandring', 'krævende'] },
-      { time: 'Alternativ', title: 'Køretur på Lysevegen', desc: 'For dem der ikke vandrer: køreturen alene er en oplevelse. Stop ved Øygardstølen for udsigt.', tags: ['kørsel'] },
-      { time: 'Aften', title: 'Aftensmad: Pasta carbonara', desc: 'Mette & Lars har madansvar (2. aften). Hurtig og mættende efter en lang dag — med bacon, parmesan og frisk peber.', tags: ['mad'] }
+      { time: 'Formiddag', title: 'Lysevegen — scenic drive', desc: '27 hårnålesving og 900m højdeforskel mellem Sirdal og Lysebotn. Én af Norges mest spektakulære bjergveje. Stop ved Øygardstølen ("Ørneredet") for panoramaudsigten. Ca. 1 time hver vej.', tags: ['kørsel', 'sol'] },
+      { time: 'Alternativ', title: 'Kjeragbolten for de vandreivrige', desc: 'De hårdføre kan tage vandringen — 11 km t/r, 5-7 timer, tre stejle klatrepartier med kæder. Startsted er Øygardstølen. Ikke for højdeforskrækkede. <a href="https://kjerag.info/" target="_blank" rel="noopener">kjerag.info</a>.', tags: ['vandring', 'krævende'] },
+      { time: 'Eftermiddag', title: 'Røseknuten fra Tjørhomfjellet', desc: 'For dem der bliver hjemme: familievenlig topvandring — tag stoleliften op, gå til Røseknuten, og få udsigt til de fjelde vi så fra Lysefjorden fredag. 2-3 timer.', tags: ['vandring'] },
+      { time: 'Aften', title: 'Aftensmad: Rensdyrgryde', desc: 'Camilla & Morten har madansvar. Norsk fjeldklassiker med rensdyrkød (kan købes i Tonstad), champignoner, tyttebær og fløde. Serveres med kartoffelmos og syltede tyttebær. Nordisk komfort-mad i sin fineste form.', tags: ['mad'] }
     ]
   },
   {
     date: '2026-07-28', weekday: 'Tir', day: 28, month: 'JUL',
-    title: 'Roligere dag & afslutning',
-    subtitle: 'Vi nyder det sidste',
+    title: 'Bufferdag & afslutning',
+    subtitle: 'Vi nyder det sidste — vejret bestemmer',
     activities: [
-      { time: 'Formiddag', title: 'Lifttur ved Tjørholmfjellet', desc: 'Tag liften op og nyd udsigten — eller gå turen, hvis I har gnist i benene endnu.', tags: ['aktivitet'] },
-      { time: 'Frokost', title: 'Picnic ved Dorgefossen', desc: 'Spektakulært vandfald. Tag madpakker med og spis på klipperne i nærheden.', tags: ['oplevelse'] },
-      { time: 'Eftermiddag', title: 'Fiskeri eller Vandpark', desc: 'Børnene kan fiske i Sirdalsvatnet, eller hele banden kan tage til <a href="https://www.sirdalbadeland.no/" target="_blank" rel="noopener">Sirdal Badeland</a> hvis vejret er gråt.', tags: ['aktivitet', 'regn'] },
-      { time: 'Aften', title: 'Aftensmad: Burgers &amp; pommes frites', desc: 'Camilla & Morten har madansvar (2. aften). Hjemmelavede burgers, coleslaw og sennepsmajo. Børnene jubler.', tags: ['mad'] },
-      { time: 'Sent', title: 'Sidste aften: spil, fortællinger &amp; afsked', desc: 'Hitster, Bezzerwisser, Wii — og en sidste tur ud at se på stjernerne.', tags: ['hygge'] }
+      { time: 'Formiddag', title: 'Vejret bestemmer', desc: 'Sol: Sinnes vandpark (5 min væk — gratis udendørs vandpark i Sinnesvatnet med klatrevæg og "matte"), eller kano på Sirdalsvatnet. Regn: Tonstadbadet — indendørs badeanlæg med tre bassiner, sauna og steambadstu, 25 min væk.', tags: ['aktivitet'] },
+      { time: 'Frokost', title: 'Frokost på hytten', desc: 'Vi rydder op i køleskabet — brug det der er tilbage af pålæg, ost og brød.', tags: ['mad'] },
+      { time: 'Eftermiddag', title: 'Ekstra tur eller Flekkefjord', desc: 'For dem med gnist tilbage: Flekkefjord med Hollenderbyen (charmerende hvide træhuse fra 1500-tallet og over 30 gadekunst-værker, 1 time væk). Ellers: en dovendag på terrassen med bog og kaffe.', tags: ['aktivitet'] },
+      { time: 'Aften', title: 'Aftensmad: Hjemmelavede burgers & fries', desc: 'Mette & Lars har madansvar. Store, saftige burgers med coleslaw, syltede løg og sennepsmajo. Hjemmelavede pommes frites i ovnen. Børnene jubler.', tags: ['mad'] },
+      { time: 'Sent', title: 'Sidste aften: spil, fortællinger &amp; afsked', desc: 'Hitster, Bezzerwisser, Wii — og en sidste tur ud at se på stjernerne. Solnedgang ca. 22:30.', tags: ['hygge'] }
     ]
   },
   {

@@ -13,6 +13,7 @@
 
   var filter = { cat: 'Alle', fam: 'Alle', sort: 'Kategori', q: '', hideDone: false };
   var customFam = '';   // valgt familie i "tilføj"-formular ('' = Fælles)
+  var newItemCat = 'Diverse';  // valgt kategori i "tilføj ny ting"-formular
 
   function esc(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 
@@ -32,7 +33,7 @@
   function renderSummary(state) {
     var box = $('#bringSummary'); if (!box) return;
     var counts = {}; CODES.forEach(function (c) { counts[c] = 0; });
-    window.BRING_ITEMS.forEach(function (it) {
+    Store.bringItems().forEach(function (it) {
       var e = state.bring[it.id] || {};
       CODES.forEach(function (c) { if (e[c]) counts[c]++; });
     });
@@ -49,6 +50,52 @@
     var wrap = $('#bringControls'); if (!wrap || wrap.dataset.built) return;
     wrap.dataset.built = '1';
 
+    /* --- Tilføj ny ting --- */
+    var addWrap = el('div', 'bring-add');
+
+    var addLabel = el('div', 'bring-add-label', 'Mangler der noget på listen? Tilføj det her:');
+    addWrap.appendChild(addLabel);
+
+    var addRow = el('div', 'bring-add-row');
+    var addInput = el('input', 'bring-add-input');
+    addInput.type = 'text';
+    addInput.placeholder = 'Fx “Solcreme”, “Termokande”, “Grillspyd”…';
+    addRow.appendChild(addInput);
+    addWrap.appendChild(addRow);
+
+    var catPicker = el('div', 'bring-add-cats');
+    window.BRING_CATEGORIES.forEach(function (c) {
+      var b = el('button', 'bring-add-cat' + (c === newItemCat ? ' on' : ''), c);
+      b.type = 'button';
+      b.onclick = function () {
+        newItemCat = c;
+        catPicker.querySelectorAll('.bring-add-cat').forEach(function (x) { x.classList.remove('on'); });
+        b.classList.add('on');
+      };
+      catPicker.appendChild(b);
+    });
+
+    var addBtn = el('button', 'btn btn-primary bring-add-btn', '+ Tilføj');
+    addBtn.type = 'button';
+    addBtn.onclick = function () {
+      var v = addInput.value.trim();
+      if (!v) { addInput.focus(); return; }
+      Store.addBringItem(v, newItemCat);
+      addInput.value = '';
+      addInput.focus();
+    };
+    addInput.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Enter') { ev.preventDefault(); addBtn.click(); }
+    });
+
+    var addControls = el('div', 'bring-add-controls');
+    addControls.appendChild(catPicker);
+    addControls.appendChild(addBtn);
+    addWrap.appendChild(addControls);
+
+    wrap.appendChild(addWrap);
+
+    /* --- Søgning --- */
     var search = el('input', 'bring-search');
     search.type = 'search'; search.placeholder = '🔍 Søg efter en ting…';
     search.oninput = function () { filter.q = this.value.toLowerCase(); renderList(Store.getState()); };
@@ -113,10 +160,18 @@
     var fams = CODES.map(function (c) {
       return '<button class="fam-toggle ' + c + (e[c] ? ' on ' + c : '') + '" data-item="' + it.id + '" data-fam="' + c + '" title="' + FAM_BY_CODE[c].name + '">' + FAM_BY_CODE[c].initial + '</button>';
     }).join('');
+    var delBtn = it.userAdded
+      ? '<button class="bring-item-del" data-del-item="' + it.id + '" title="Fjern ' + esc(it.name) + '">✕</button>'
+      : '';
+    var nameHtml = esc(it.name)
+      + (it.userAdded ? ' <span class="bring-item-badge">tilføjet</span>' : '')
+      + (it.note ? '<div class="bring-item-note">' + esc(it.note) + '</div>' : '');
     row.innerHTML = '<div class="bring-item-top">'
       + '<button class="bring-check' + (e.done ? ' on' : '') + '" data-done="' + it.id + '" title="Marker som klaret/købt"></button>'
-      + '<div class="bring-item-name">' + esc(it.name) + (it.note ? '<div class="bring-item-note">' + esc(it.note) + '</div>' : '') + '</div>'
-      + '<div class="bring-fams">' + fams + '</div></div>';
+      + '<div class="bring-item-name">' + nameHtml + '</div>'
+      + '<div class="bring-fams">' + fams + '</div>'
+      + delBtn
+      + '</div>';
     return row;
   }
 
@@ -124,7 +179,7 @@
     var box = $('#bringList'); if (!box) return;
     box.innerHTML = '';
 
-    var items = window.BRING_ITEMS.filter(function (it) { return matches(it, state); });
+    var items = Store.bringItems().filter(function (it) { return matches(it, state); });
 
     if (!items.length) {
       box.appendChild(el('div', 'bring-empty', 'Ingen ting matcher filteret 🤷'));
@@ -162,6 +217,13 @@
     });
     document.querySelectorAll('.bring-check[data-done]').forEach(function (btn) {
       btn.onclick = function () { Store.toggleDone(btn.dataset.done); };
+    });
+    document.querySelectorAll('.bring-item-del[data-del-item]').forEach(function (btn) {
+      btn.onclick = function () {
+        if (confirm('Fjern denne ting fra listen?')) {
+          Store.removeBringItem(btn.dataset.delItem);
+        }
+      };
     });
   }
 
@@ -207,7 +269,7 @@
   function copyList(state) {
     var lines = ['MEDBRING — Sirdal 2026', ''];
     window.BRING_CATEGORIES.forEach(function (cat) {
-      var inCat = window.BRING_ITEMS.filter(function (it) { return it.cat === cat; });
+      var inCat = Store.bringItems().filter(function (it) { return it.cat === cat; });
       lines.push('== ' + cat + ' ==');
       inCat.forEach(function (it) {
         var e = state.bring[it.id] || {};

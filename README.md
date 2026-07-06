@@ -9,7 +9,7 @@ Program, live vejr, madplan, "hvem tager hvad med"-liste og fælles ting – alt
 
 Siden er lavet som helt almindelige filer og kan ligge gratis på GitHub Pages.
 
-1. Opret en (gratis) konto på **github.com**, hvis du ikke har en.
+1. Opret  en (gratis) konto på **github.com**, hvis du ikke har en.
 2. Klik **New repository**. Giv den fx navnet `sirdal-2026`. Vælg **Public**. Klik **Create repository**.
 3. På repo-siden: klik **Add file → Upload files**.
 4. Træk **hele indholdet** af denne mappe ind (altså `index.html`, `config.js`, `.nojekyll` og hele `assets`-mappen). Vigtigt: læg filerne direkte i repoet – ikke inde i en undermappe.

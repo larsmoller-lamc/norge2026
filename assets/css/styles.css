@@ -78,8 +78,23 @@ body {
   font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
   opacity: 0.9;
 }
-.hero-top .flag { display: inline-flex; gap: 2px; align-items: center; }
-.hero-top .flag span { width: 4px; height: 14px; border-radius: 1px; }
+.hero-top .flag { display: inline-flex; gap: 6px; align-items: center; }
+.hero-top .flag-no {
+  /* Norsk flag i miniature — rød baggrund med hvidt kors, blåt kors indeni.
+     Proportioner 22:16, korset placeret 1/3 fra venstre (norsk standard). */
+  width: 22px; height: 16px;
+  border-radius: 2px;
+  background:
+    /* Blåt kors (indeni) */
+    linear-gradient(#00205b, #00205b) 8px 0 / 2px 100% no-repeat,
+    linear-gradient(#00205b, #00205b) 0 7px / 100% 2px no-repeat,
+    /* Hvidt kors (ydre) */
+    linear-gradient(#fff, #fff) 6px 0 / 6px 100% no-repeat,
+    linear-gradient(#fff, #fff) 0 5px / 100% 6px no-repeat,
+    /* Rød baggrund */
+    #ef2b2d;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+}
 .hero-content { position: relative; z-index: 3; margin-top: auto; }
 .hero-eyebrow {
   font-family: 'Fraunces', serif; font-style: italic; font-weight: 400;

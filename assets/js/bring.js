@@ -40,7 +40,7 @@
       return '<div class="bring-summary-cell">'
         + '<div class="bring-summary-icon ' + f.icon + '">' + f.initial + '</div>'
         + '<div class="bring-summary-info"><div class="bring-summary-count">' + counts[f.code] + '</div>'
-        + '<div class="bring-summary-label">' + f.name.split(' & ')[0] + ' & …</div></div></div>';
+        + '<div class="bring-summary-label">' + f.name + '</div></div></div>';
     }).join('');
   }
 
@@ -165,14 +165,8 @@
     });
   }
 
-  /* ---------- LEGEND ---------- */
-  function buildLegend() {
-    var lg = $('#bringLegend'); if (!lg || lg.dataset.built) return;
-    lg.dataset.built = '1';
-    lg.innerHTML = FAMS.map(function (f) {
-      return '<span><span class="legend-dot ' + f.code + '"></span> ' + f.name + '</span>';
-    }).join('');
-  }
+  /* Legend er fjernet — familie-cirklerne har allerede initialer + tooltip. */
+  function buildLegend() { /* no-op */ }
 
   /* ---------- TOOLS (del / eksport / print) ---------- */
   function buildTools() {

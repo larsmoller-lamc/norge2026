@@ -120,43 +120,102 @@ window.MEALS = [
   { date: '29. jul', day: 'Ons', breakfast: 'Fælles morgenmad', breakfastChef: 'Alle', dinner: 'Hjemme 🏡', dinnerChef: '—' }
 ];
 
+/* Alle links tjekket og verificeret juli 2026. Ture inkluderer både dem der
+   er på ugens program og ekstra forslag, hvis nogen vil supplere. */
 window.ATTRACTIONS = [
+
+  /* ============ VANDRING ============ */
+
   { name: 'Preikestolen', art: 'art-rock', diff: 'medium', diffLabel: 'Mellem',
-    desc: 'Den ikoniske 604m høje klippe over Lysefjorden. En af Norges mest fotograferede steder.',
-    meta: [['⏱', '4-5 timer t/r'], ['📏', '8 km'], ['⬆', '500m stigning']],
-    link: 'https://www.visitnorway.no/reisemal/fjord-norge/lysefjorden/preikestolen/' },
-  { name: 'Kjeragbolten', art: 'art-mountain', diff: 'hard', diffLabel: 'Krævende',
-    desc: 'Sten klemt mellem to klipper 1000m over fjorden. Krævende vandring, men en oplevelse for livet.',
-    meta: [['⏱', '6-10 timer'], ['📏', '11 km'], ['⬆', '800m stigning']],
-    link: 'https://www.visitnorway.no/listings/kjeragbolten/19737/' },
-  { name: 'Lysefjorden Cruise', art: 'art-fjord', diff: 'easy', diffLabel: 'Let',
-    desc: 'Sejlads forbi vandfald, klippevægge og Preikestolen set fra vandet. Også børnevenlig.',
-    meta: [['⏱', '2-3 timer'], ['⛴', 'Fra Lauvvik/Forsand'], ['👶', 'Familievenlig']],
-    link: 'https://www.rodne.no/en/lysefjorden-cruise-2/' },
-  { name: 'Norsk Oljemuseum', art: 'art-city', diff: 'easy', diffLabel: 'Indendørs',
-    desc: 'Interaktivt museum i Stavanger om Norges oliehistorie. Fanger både børn og voksne.',
-    meta: [['⏱', '2-3 timer'], ['📍', 'Stavanger'], ['☔', 'God i regnvejr']],
-    link: 'https://www.norskolje.museum.no/' },
-  { name: 'Lysevegen', art: 'art-mountain', diff: 'easy', diffLabel: 'Køretur',
-    desc: '27 hårnålesving op fra fjorden — én af Norges mest spektakulære bjergveje. Stop ved Øygardstølen.',
-    meta: [['⏱', '1-2 timer'], ['🚗', 'Køretur'], ['📷', 'Fotostop']],
-    link: 'https://www.visitnorway.no/listings/lysevegen/213907/' },
-  { name: 'Stavanger', art: 'art-city', diff: 'easy', diffLabel: 'Bytur',
-    desc: 'Hyggelig by med "Gamle Stavanger" — hvide træhuse, brostensgader og masser af cafeer.',
-    meta: [['⏱', '½ dag'], ['🚗', '1½ time'], ['🍦', 'Cafeer & is']],
-    link: 'https://www.visitnorway.no/reisemal/fjord-norge/stavanger/' },
+    desc: 'Den ikoniske 604m høje klippe over Lysefjorden — en af verdens mest spektakulære udsigter. Godt tilrettelagt sherpa-sti med trin. Børn fra 5-6 år kan klare det med gode sko.',
+    meta: [['⏱', '4 timer t/r'], ['📏', '8 km'], ['⬆', '500m stigning'], ['🚗', '1t 45min']],
+    link: 'https://www.visitnorway.com/places-to-go/fjord-norway/ryfylke/the-lysefjord-area/hiking-to-preikestolen/' },
+
+  { name: 'Røseknuten fra Tjørhomfjellet', art: 'art-mountain', diff: 'easy', diffLabel: 'Let',
+    desc: 'Familievenlig topvandring, oplagt at kombinere med stoleliften op. På toppen har man udsigt til de fjelde, man senere ser fra Lysefjorden. Grusvej og markerede stier.',
+    meta: [['⏱', '2-3 timer'], ['🚡', 'Lifttur op'], ['⬆', 'Moderat stigning'], ['🚗', '15 min']],
+    link: 'https://hoytlavt.no/sirdal/en/activities/other-activities/' },
+
   { name: 'Dorgefossen', art: 'art-water', diff: 'easy', diffLabel: 'Let',
-    desc: 'Spektakulært vandfald nær Sirdal. Kort vandring og perfekt picnic-spot.',
-    meta: [['⏱', '1 time'], ['📷', 'Fotospot'], ['🥪', 'Picnic']],
-    link: 'https://www.sirdalsferie.no/' },
-  { name: 'Tjørholmfjellet', art: 'art-forest', diff: 'easy', diffLabel: 'Let',
-    desc: 'Lifttur op til toppen for fantastisk udsigt. Også populært til fjellgolf og disc-golf.',
-    meta: [['⏱', '2-3 timer'], ['🚡', 'Lifttur'], ['⛳', 'Disc-golf']],
-    link: 'https://www.sirdalsferie.no/' },
-  { name: 'Sirdal Badeland', art: 'art-water', diff: 'easy', diffLabel: 'Familie',
-    desc: 'Indendørs vandpark med rutsjebaner og bølgebassin — perfekt redningsplan i regnvejr.',
-    meta: [['☔', 'Indendørs'], ['👨‍👩‍👧', 'Børnevenlig'], ['🏊', 'Bassiner']],
-    link: 'https://www.sirdalbadeland.no/' }
+    desc: 'Imponerende vandfald i en dyb kløft. Kort gåtur fra p-plads til udsigtsplatform. Picnicborde, sti ned til kløftens kant og "Håvardsteinen" — en 3.200 kg sten som en stærk mand fra Sirdal angiveligt løftede med håndkraft.',
+    meta: [['⏱', '½-1 time'], ['📷', 'Fotospot'], ['🥪', 'Picnicborde'], ['🚗', '30 min']],
+    link: 'https://www.fjordnorway.com/en/see-and-do/dorgefoss-waterfall' },
+
+  { name: 'Kjeragbolten', art: 'art-mountain', diff: 'hard', diffLabel: 'Krævende',
+    desc: 'Den berømte sten klemt mellem to klipper 1.000m over Lysefjorden. Krævende vandring med tre stejle klatrepartier med kæder. Ikke for dem der er bange for højder eller små børn. Sæson: juni-september.',
+    meta: [['⏱', '5-7 timer'], ['📏', '11 km'], ['⬆', '800m stigning'], ['🚗', '1 time']],
+    link: 'https://kjerag.info/' },
+
+  /* ============ SEJLADS & VAND ============ */
+
+  { name: 'Lysefjord-cruise (Rødne)', art: 'art-fjord', diff: 'easy', diffLabel: 'Familie',
+    desc: 'Sejlads på eldrevet katamaran fra Stavanger gennem Lysefjorden. Passerer Fantahålå (fredløseshule), Hengjanefossen-vandfaldet (så tæt at man mærker sprayen) og Preikestolen set fra vandet. Waffles og kaffe ombord.',
+    meta: [['⏱', '3-3½ timer'], ['⛴', 'Fra Stavanger'], ['👶', 'Familievenlig'], ['⚡', 'Elektrisk båd']],
+    link: 'https://rodne.no/en/fjord-experiences/stavanger/fjordcruise-lysefjord-preikestolen/' },
+
+  { name: 'Kano & SUP på Sirdalsvatnet', art: 'art-water', diff: 'easy', diffLabel: 'Aktivitet',
+    desc: 'Sirdal Fjellpark udlejer kanoer (3-4 personer pr. kano — perfekt til familier) og SUP-boards direkte ved klatreparken. En rolig eftermiddag på det spejlblanke fjeldvand.',
+    meta: [['⏱', '1-3 timer'], ['🛶', 'Udlejning'], ['👨‍👩‍👧', 'Alle aldre'], ['🚗', '10 min']],
+    link: 'https://hoytlavt.no/sirdal/en/activities/other-activities/' },
+
+  { name: 'Sinnes vandpark', art: 'art-water', diff: 'easy', diffLabel: 'Familie',
+    desc: 'Gratis udendørs vandpark i Sinnesvatnet lige ved Sinnes Fjellstue — 5 min fra hytten. To elementer: en klatrevæg og en "matte". Parker på modsatte side af vejen mod Ålsheia. Bading på eget ansvar.',
+    meta: [['🆓', 'Gratis'], ['🏊', 'Udendørs'], ['👶', 'Børnevenlig'], ['🚗', '5 min']],
+    link: 'https://visitsirdal365.no/opplevelser/aktiviteter/badeplasser' },
+
+  /* ============ BY ============ */
+
+  { name: 'Stavanger', art: 'art-city', diff: 'easy', diffLabel: 'Bytur',
+    desc: 'Gamle Stavanger med 173 fredede, hvide træhuse og brostensgader. Farvegade (Fargegata) med regnbue-facader, fiskemarked ved havnen og masser af cafeer. Combine med Norsk Oljemuseum for en hel dag.',
+    meta: [['⏱', '½-1 dag'], ['🚗', '1½ time'], ['🍦', 'Cafeer & shopping']],
+    link: 'https://www.visitnorway.com/places-to-go/fjord-norway/the-stavanger-region/' },
+
+  { name: 'Norsk Oljemuseum', art: 'art-city', diff: 'easy', diffLabel: 'Indendørs',
+    desc: 'Interaktivt museum i Stavanger om Norges oliehistorie — bygningen ligner selv en boreplatform. Rutsjebane, katastrofe-rum og en klatre-platform for børnene. God plan B i regnvejr. Voksne 180 NOK, børn 4-16 år 60 NOK, familie 420 NOK.',
+    meta: [['⏱', '2-3 timer'], ['📍', 'Stavanger'], ['☔', 'God i regnvejr'], ['🎫', 'Familiebillet 420 NOK']],
+    link: 'https://www.norskolje.museum.no/en/' },
+
+  { name: 'Flekkefjord & Hollenderbyen', art: 'art-city', diff: 'easy', diffLabel: 'Bytur',
+    desc: 'Overset lille kystby med charmerende "Hollenderbyen" — hvide træhuse fra 1500-1700-tallet, brostensgader, over 30 gadekunst-værker og Grand Hotell fra 1897. Kortere tur end Stavanger, mere autentisk stemning.',
+    meta: [['⏱', '½ dag'], ['🚗', '1 time'], ['🎨', 'Gadekunst']],
+    link: 'https://www.visitnorway.com/places-to-go/southern-norway/flekkefjord/' },
+
+  /* ============ AKTIVITETER (SIRDAL FJELLPARK) ============ */
+
+  { name: 'Høyt & Lavt klatrepark', art: 'art-forest', diff: 'medium', diffLabel: 'Aktivitet',
+    desc: 'Klatrepark ved Tjørhomfjellet: 7 baner, 58 forhindringer og 7 ziplines — den længste over 200 meter. Farve-inddelt efter sværhed (orange fra 80 cm, blå fra 140 cm). Alle jeres børn kan være med på et niveau.',
+    meta: [['⏱', '2-3 timer'], ['🧗', 'Klatring'], ['👶', 'Fra 80 cm'], ['🚗', '10 min']],
+    link: 'https://hoytlavt.no/sirdal/en/' },
+
+  { name: 'Mountain Cart', art: 'art-mountain', diff: 'easy', diffLabel: 'Aktivitet',
+    desc: 'Trehjulede off-road-vogne med bremser på begge baghjul. Kør ned ad 700m specialbanen. Alene fra 140 cm eller 12 år — mindre børn må køre med en voksen. Ren adrenalin på moderat niveau.',
+    meta: [['⏱', '1-2 timer'], ['🛞', 'Vogntur'], ['👶', 'Fra 140 cm'], ['🚗', '10 min']],
+    link: 'https://hoytlavt.no/sirdal/en/activities/other-activities/' },
+
+  { name: 'Tjørhomfjellet (stolelift)', art: 'art-mountain', diff: 'easy', diffLabel: 'Familie',
+    desc: 'Områdets eneste stolelift tager jer op på 928 m. Bare turen op er en oplevelse — panorama over hele Sirdal. Kombiner med kaffe i Sirdal Lodge nedenunder eller en let vandring til Røseknuten på toppen.',
+    meta: [['⏱', '1-2 timer'], ['🚡', 'Lifttur'], ['📷', 'Panorama'], ['🚗', '10 min']],
+    link: 'https://sirdalfjellpark.no/en/' },
+
+  { name: 'Frisbee-golf & fjellgolf', art: 'art-forest', diff: 'easy', diffLabel: 'Aktivitet',
+    desc: 'Gratis 9-huls frisbee-golf-bane ved bunden af stoleliften — hvis I ikke selv har frisbees, kan de lejes hos Sirdal Lodge-restauranten. Der er også en 9-huls fjellgolf-bane i området.',
+    meta: [['⏱', '1-2 timer'], ['⛳', '9 huller'], ['🆓', 'Gratis m. egen frisbee'], ['🚗', '10 min']],
+    link: 'https://hoytlavt.no/sirdal/en/activities/other-activities/' },
+
+  /* ============ KØRSEL & UDFLUGT ============ */
+
+  { name: 'Lysevegen', art: 'art-mountain', diff: 'easy', diffLabel: 'Køretur',
+    desc: '27 hårnålesving og 900m højdeforskel mellem Lysebotn og Sirdal — én af Norges mest spektakulære bjergveje. Stop ved Øygardstølen ("Ørneredet") for panoramaudsigten. Kan kombineres med Kjerag-vandring eller bare som scenic drive.',
+    meta: [['⏱', '1-2 timer'], ['🚗', 'Køretur'], ['📷', '27 hårnåle'], ['🌄', 'Åben maj-okt']],
+    link: 'https://www.fjordnorway.com/en/see-and-do/lysevegen-road' },
+
+  /* ============ REGNVEJRS-PLAN B ============ */
+
+  { name: 'Tonstadbadet', art: 'art-water', diff: 'easy', diffLabel: 'Indendørs',
+    desc: 'Indendørs badeanlæg i Tonstad med tre bassiner: sportsbassin (28°C, 12,5m med vippe og 3m stupetårn), velværebassin (33°C med modstrøm, massage og boblebad) og lærings-/plaskebassin. Sauna og steambadstu. Perfekt regnvejrs-plan B.',
+    meta: [['☔', 'Indendørs'], ['🏊', '3 bassiner'], ['🧖', 'Sauna + steam'], ['🚗', '25 min']],
+    link: 'https://www.sirdal.kommune.no/tjenester/kultur-idrett-og-fritid/tonstadbadet-og-sinnesbadet/tonstadbadet' }
+
 ];
 
 /* =====================================================================

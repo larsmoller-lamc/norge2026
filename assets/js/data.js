@@ -111,12 +111,12 @@ window.DAYS = [
 
 window.MEALS = [
   { date: '22. jul', day: 'Ons', breakfast: '—', breakfastChef: 'På vejen', dinner: 'Velkomst-tacos', dinnerChef: 'Fælles' },
-  { date: '23. jul', day: 'Tor', breakfast: 'Klassisk morgenmad', breakfastChef: 'Mette & Morten', dinner: 'Grillaften: Kyllingespyd & pølser', dinnerChef: 'Mette & Lars' },
-  { date: '24. jul', day: 'Fre', breakfast: 'Klassisk morgenmad', breakfastChef: 'Lars & Gitte', dinner: 'Lasagne m. salat & hvidløgsbrød', dinnerChef: 'Camilla & Morten' },
-  { date: '25. jul', day: 'Lør', breakfast: 'Klassisk morgenmad', breakfastChef: 'Camilla & Chresten', dinner: 'Fiskefrikadeller m. persillesovs', dinnerChef: 'Gitte & Chresten' },
-  { date: '26. jul', day: 'Søn', breakfast: 'Klassisk morgenmad', breakfastChef: 'Lars & Camilla', dinner: 'Restaurant-aften ude 🍽', dinnerChef: 'Ude' },
-  { date: '27. jul', day: 'Man', breakfast: 'Klassisk morgenmad', breakfastChef: 'Mette & Chresten', dinner: 'Pasta carbonara', dinnerChef: 'Mette & Lars' },
-  { date: '28. jul', day: 'Tir', breakfast: 'Klassisk morgenmad', breakfastChef: 'Gitte & Morten', dinner: 'Hjemmelavede burgers & fries', dinnerChef: 'Camilla & Morten' },
+  { date: '23. jul', day: 'Tor', breakfast: 'Klassisk morgenmad', breakfastChef: 'Mette & Morten', dinner: 'Grillaften: Ørred el. laks og pølser', dinnerChef: 'Mette & Lars' },
+  { date: '24. jul', day: 'Fre', breakfast: 'Klassisk morgenmad', breakfastChef: 'Lars & Gitte', dinner: 'Norske "frikadeller" i brun sovs', dinnerChef: 'Camilla & Morten' },
+  { date: '25. jul', day: 'Lør', breakfast: 'Klassisk morgenmad', breakfastChef: 'Camilla & Chresten', dinner: 'Restaurant-aften ude 🍽', dinnerChef: 'Ude' },
+  { date: '26. jul', day: 'Søn', breakfast: 'Klassisk morgenmad', breakfastChef: 'Lars & Camilla', dinner: 'Pasta carbonara', dinnerChef: 'Gitte & Chresten' },
+  { date: '27. jul', day: 'Man', breakfast: 'Klassisk morgenmad', breakfastChef: 'Mette & Chresten', dinner: 'Rensdyrgryde', dinnerChef: 'Camilla & Morten' },
+  { date: '28. jul', day: 'Tir', breakfast: 'Klassisk morgenmad', breakfastChef: 'Gitte & Morten', dinner: 'Hjemmelavede burgers & fries', dinnerChef: 'Mette & Lars' },
   { date: '29. jul', day: 'Ons', breakfast: 'Fælles morgenmad', breakfastChef: 'Alle', dinner: 'Hjemme 🏡', dinnerChef: '—' }
 ];
 

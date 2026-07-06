@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2c5044">
+  <title>Sirdal 2026 · Familietur til Norge</title>
+  <meta name="description" content="Familietur til Sirdal Mountain Lodge, 22.–29. juli 2026.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="top">
+    <div class="hero-photo"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+
+    <div class="hero-top">
+      <span>Sirdal Mountain Lodge</span>
+      <span class="flag">
+        <span style="background:#ba0c2f"></span>
+        <span style="background:#fff"></span>
+        <span style="background:#00205b"></span>
+        &nbsp;Norge
+      </span>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Familietur · sommeren 2026</div>
+      <h1>Sirdal<br><em>2026</em></h1>
+      <div class="hero-meta">
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          22.–29. juli
+        </span>
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          16 personer · 4 familier
+        </span>
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Sinnes, Sirdal
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+  </header>
+
+  <!-- ===================== COUNTDOWN ===================== -->
+  <div class="countdown">
+    <div class="countdown-label">Vi ses i hytten om…</div>
+    <div class="countdown-grid">
+      <div class="countdown-cell"><div class="countdown-num" id="cd-d">–</div><div class="countdown-unit">Dage</div></div>
+      <div class="countdown-cell"><div class="countdown-num" id="cd-h">–</div><div class="countdown-unit">Timer</div></div>
+      <div class="countdown-cell"><div class="countdown-num" id="cd-m">–</div><div class="countdown-unit">Min</div></div>
+      <div class="countdown-cell"><div class="countdown-num" id="cd-s">–</div><div class="countdown-unit">Sek</div></div>
+    </div>
+  </div>
+
+  <!-- ===================== PROGRAM ===================== -->
+  <section class="content" id="program">
+    <div class="section-head">
+      <span class="section-kicker">Dag for dag</span>
+      <h2 class="section-title">Ugens <em>program</em></h2>
+      <p class="section-intro">Vælg en dag og se planen. Alt er forslag – vi tager det som det kommer.</p>
+    </div>
+    <div class="day-tabs" id="dayTabs"></div>
+    <div class="day-cards" id="dayCards"></div>
+  </section>
+
+  <!-- ===================== VEJR ===================== -->
+  <section class="content alt" id="vejr">
+    <div class="section-head">
+      <span class="section-kicker">Live fra fjeldet</span>
+      <h2 class="section-title">Vejret i <em>Sirdal</em></h2>
+      <p class="section-intro">Opdateret prognose for Sinnes. Prognosen bliver mere præcis, jo tættere vi kommer på afrejse.</p>
+    </div>
+    <div id="weatherBox"></div>
+  </section>
+
+  <!-- ===================== MADPLAN ===================== -->
+  <section class="content" id="madplan">
+    <div class="section-head">
+      <span class="section-kicker">Hvem laver mad</span>
+      <h2 class="section-title">Mad<em>plan</em></h2>
+      <p class="section-intro">Aftensmaden går på skift mellem familierne. Morgenmad og frokost er fælles buffet.</p>
+    </div>
+    <div class="meals-list" id="mealsList"></div>
+  </section>
+
+  <!-- ===================== MEDBRING ===================== -->
+  <section class="content alt" id="medbring">
+    <div class="section-head">
+      <span class="section-kicker">Hvem tager hvad med</span>
+      <h2 class="section-title">Med<em>bring-liste</em></h2>
+      <p class="section-intro">Tryk på en familie-cirkel for at markere, hvem der tager varen med. Sæt flueben når den er pakket. Filtrér og sortér som I vil.</p>
+    </div>
+    <div id="syncBadge"></div>
+    <div id="bringSummary"></div>
+    <div id="bringControls"></div>
+    <div id="bringLegend"></div>
+    <div id="bringList"></div>
+    <div id="bringTools"></div>
+  </section>
+
+  <!-- ===================== FÆLLES TING ===================== -->
+  <section class="content" id="faelles">
+    <div class="section-head">
+      <span class="section-kicker">Alt det andet</span>
+      <h2 class="section-title">Fælles <em>ting</em></h2>
+      <p class="section-intro">Spil, højttaler, snittekniv, brætspil … skriv det på her, og vælg hvem der tager det med.</p>
+    </div>
+    <div id="customAdd"></div>
+    <div id="customGroups"></div>
+  </section>
+
+  <!-- ===================== ATTRAKTIONER ===================== -->
+  <section class="content alt" id="attraktioner">
+    <div class="section-head">
+      <span class="section-kicker">Ud i naturen</span>
+      <h2 class="section-title">Ture &amp; <em>oplevelser</em></h2>
+      <p class="section-intro">Idéer til dage med godt vejr – og et par ting til de våde dage.</p>
+    </div>
+    <div class="attractions" id="attractions"></div>
+  </section>
+
+  <!-- ===================== HOLD ===================== -->
+  <section class="content" id="hold">
+    <div class="section-head">
+      <span class="section-kicker">Hele holdet</span>
+      <h2 class="section-title">De fire <em>familier</em></h2>
+      <p class="section-intro">16 personer under ét græstag. Og en fødselar, der skal fejres.</p>
+    </div>
+    <div class="families" id="families"></div>
+  </section>
+
+  <!-- ===================== PRAKTISK ===================== -->
+  <section class="content alt" id="praktisk">
+    <div class="section-head">
+      <span class="section-kicker">Godt at vide</span>
+      <h2 class="section-title">Praktisk &amp; <em>pakkeliste</em></h2>
+      <p class="section-intro">Det vigtigste at huske – og hvor vi skal hen.</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>
+          <span class="info-card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          Husk at pakke
+        </h3>
+        <ul class="checklist">
+          <li><strong>Varmt tøj</strong> – fjeldvejr skifter hurtigt, også om sommeren</li>
+          <li><strong>Regntøj &amp; vandtætte sko</strong> til gåture</li>
+          <li>Solcreme, solbriller og kasket</li>
+          <li>Badetøj og håndklæder</li>
+          <li>Vandreveste / rygsæk til dagsture</li>
+          <li>Personlig medicin</li>
+          <li>Pas / kørekort og betalingskort (husk NOK/kontanter)</li>
+          <li>Oplader, adapter og powerbank</li>
+          <li>Evt. brætspil og bøger til hyggeaftener</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>
+          <span class="info-card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          Ind- &amp; udtjekning
+        </h3>
+        <ul class="info-list">
+          <li><strong>Indtjek</strong><span>Onsdag 22. juli fra kl. 15.00</span></li>
+          <li><strong>Udtjek</strong><span>Onsdag 29. juli senest kl. 11.00</span></li>
+          <li><strong>Arrangører</strong><span>Camilla, Gitte &amp; Mette</span></li>
+          <li><strong>Allergier</strong><span>Ingen kendte i selskabet</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="address-card">
+      <div class="address-info">
+        <strong>Sirdal Mountain Lodge</strong>
+        <span>99 Slettekvæven, 4443 Sinnes, Norge</span>
+      </div>
+      <a class="address-action" href="https://www.google.com/maps/search/?api=1&query=Sirdal+Mountain+Lodge+Slettekveven+99+Sinnes" target="_blank" rel="noopener">Åbn i kort →</a>
+    </div>
+
+    <div class="map-wrap">
+      <iframe
+        title="Kort over Sirdal Mountain Lodge"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Slettekveven%2099%2C%204443%20Sinnes%2C%20Norge&z=12&output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <p class="foot-quote">"Til fjelds med familien – syv dage under det norske græstag."</p>
+    <p class="foot-meta">Sirdal <strong>·</strong> 22.–29. juli <strong>·</strong> 2026</p>
+  </footer>
+
+  <!-- ===================== BOTTOM NAV ===================== -->
+  <nav class="bottom-nav">
+    <a class="nav-btn" href="#top">Forside</a>
+    <a class="nav-btn" href="#program">Program</a>
+    <a class="nav-btn" href="#vejr">Vejr</a>
+    <a class="nav-btn" href="#madplan">Mad</a>
+    <a class="nav-btn" href="#medbring">Medbring</a>
+    <a class="nav-btn" href="#faelles">Fælles</a>
+    <a class="nav-btn" href="#attraktioner">Ture</a>
+    <a class="nav-btn" href="#hold">Familier</a>
+    <a class="nav-btn" href="#praktisk">Praktisk</a>
+  </nav>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="config.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/weather.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/bring.js"></script>
+</body>
+</html>

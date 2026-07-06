@@ -1,0 +1,253 @@
+/* =====================================================================
+   data.js — alt statisk indhold til Sirdal-siden
+   (program, madplan, attraktioner, familier, medbring-liste)
+   Rediger her hvis noget skal ændres.
+   ===================================================================== */
+
+/* De fire familier. Koden (ML/GC/CM/LA) bruges i medbring-listen. */
+window.FAMILIES = [
+  { code: 'LA', icon: 'fi-1', initial: 'L', name: 'Lisbeth & Anders', location: 'Hjørring · Fødselaren',
+    members: ['Lisbeth (mormor)', 'Anders'] },
+  { code: 'GC', icon: 'fi-2', initial: 'G', name: 'Gitte & Chresten', location: 'Grejs',
+    members: ['Gitte', 'Chresten', { name: 'Hans', child: true }, { name: 'Esther', child: true }, { name: 'Emil', child: true }] },
+  { code: 'CM', icon: 'fi-3', initial: 'C', name: 'Camilla & Morten', location: 'Hadsten',
+    members: ['Camilla', 'Morten', { name: 'Agnete', child: true }, { name: 'Peter', child: true }] },
+  { code: 'ML', icon: 'fi-4', initial: 'M', name: 'Mette & Lars', location: 'Søllerød',
+    members: ['Mette', 'Lars', { name: 'William', child: true }, { name: 'Frederik', child: true }, { name: 'Carl', child: true }] }
+];
+
+window.DAYS = [
+  {
+    date: '2026-07-22', weekday: 'Ons', day: 22, month: 'JUL',
+    title: 'Ankomst & afslapning',
+    subtitle: 'Vi falder til på hytten',
+    activities: [
+      { time: 'Fra kl. 15', title: 'Indtjek på Sirdal Mountain Lodge', desc: 'Find værelser, pak ud, og udforsk hytten. Husk: sengetøj og håndklæder skal redes op.', tags: ['praktisk'] },
+      { time: 'Eftermiddag', title: 'Indkøb i nærmeste købmand', desc: 'Et hold tager til den lokale dagligvarebutik (Joker Sinnes eller Coop i Tonstad) og fylder op med friske varer.', tags: ['praktisk'] },
+      { time: 'Aften', title: 'Velkomst-aftensmad: Tacos', desc: 'Klassiker når 16 sultne familiemedlemmer skal mættes. Børnene kan selv vælge fyld.', tags: ['mad'] },
+      { time: 'Sent', title: 'Aftengåtur og snak på terrassen', desc: 'Solnedgangen står på ca. 22:30 om sommeren i Sirdal — perfekt til en stille rundtur.', tags: ['hygge'] }
+    ]
+  },
+  {
+    date: '2026-07-23', weekday: 'Tor', day: 23, month: 'JUL',
+    title: 'På opdagelse lokalt',
+    subtitle: 'Vi udforsker området nær hytten',
+    activities: [
+      { time: 'Formiddag', title: 'Vandretur i Sinnes-området', desc: 'Kort, familievenlig tur med mulighed for at se ned over Sirdalsvatnet. Se også <a href="https://www.sirdalsferie.no/" target="_blank" rel="noopener">Sirdalsferie</a> for ruteforslag.', tags: ['vandring', 'sol'] },
+      { time: 'Frokost', title: 'Madpakke i det fri', desc: 'Vi spiser på en stor flad sten med udsigt — kun naturen som restaurant.', tags: ['mad'] },
+      { time: 'Eftermiddag', title: 'Aktivitetsvalg: Disc-golf, mini-golf eller fjellgolf', desc: 'Familier kan splitte sig op. <a href="https://www.sirdalsferie.no/aktiviteter" target="_blank" rel="noopener">Sirdal har flere baner</a> — fjellgolfen ved Tjørholmfjellet er en oplevelse.', tags: ['aktivitet'] },
+      { time: 'Aften', title: 'Grillaften: Kyllingespyd & pølser', desc: 'Mette & Lars har madansvar. Sommersalat, hjemmebagt focaccia og brændt majskolbe på siden.', tags: ['mad'] }
+    ]
+  },
+  {
+    date: '2026-07-24', weekday: 'Fre', day: 24, month: 'JUL',
+    title: 'Lysefjorden',
+    subtitle: 'Den store sejltur',
+    activities: [
+      { time: 'Morgen', title: 'Tidlig morgenmad', desc: 'Vi spiser tidligt for at nå færgen til Lysefjorden.', tags: ['mad'] },
+      { time: 'Formiddag', title: 'Kør til Lauvvik eller Forsand', desc: '~1 time fra hytten. Her starter fjordcruiserne.', tags: ['kørsel'] },
+      { time: '11–14', title: 'Fjordcruise på Lysefjorden', desc: 'En af verdens smukkeste fjorde — tæt på Preikestolen fra vandet, vandfald og Kjeragmassivet. Se priser hos <a href="https://www.rodne.no/en/lysefjorden-cruise-2/" target="_blank" rel="noopener">Rødne Fjord Cruise</a>.', tags: ['oplevelse', 'sol'] },
+      { time: 'Eftermiddag', title: 'Bad i fjorden', desc: 'Stop ved Helleren eller en lille bugt undervejs hjem. Iskoldt — men friskt!', tags: ['bad'] },
+      { time: 'Aften', title: 'Aftensmad: Lasagne med hjemmelavet salat', desc: 'Camilla & Morten har madansvar. Stor portion til alle 16, med hvidløgsbrød og grov salat.', tags: ['mad'] }
+    ]
+  },
+  {
+    date: '2026-07-25', weekday: 'Lør', day: 25, month: 'JUL',
+    title: 'Preikestolen',
+    subtitle: 'Den ikoniske vandring (for dem der vil)',
+    activities: [
+      { time: 'Tidlig morgen', title: 'Afgang for vandregruppen', desc: 'De vandrelystne kører til Preikestolen Fjellstue (parkering). Ca. 1t 45min fra hytten.', tags: ['kørsel', 'vandring'] },
+      { time: '8–14', title: 'Vandring til Preikestolen', desc: '8 km t/r, ca. 4 timer. Stigning 500m. Børn fra 8-9 år kan klare det. <a href="https://www.visitnorway.no/reisemal/fjord-norge/lysefjorden/preikestolen/" target="_blank" rel="noopener">Info hos VisitNorway</a>.', tags: ['vandring', 'sol'] },
+      { time: 'Hele dagen', title: 'Alternativ: Hyggedag på hytten', desc: 'For dem der bliver hjemme: bad i Sirdalsvatnet, brætspil, læsning og en god lang frokost.', tags: ['hygge'] },
+      { time: 'Aften', title: 'Aftensmad: Fiskefrikadeller m. persillesovs', desc: 'Gitte & Chresten har madansvar. Dansk klassiker med nye kartofler, rugbrød og kolde øl.', tags: ['mad'] }
+    ]
+  },
+  {
+    date: '2026-07-26', weekday: 'Søn', day: 26, month: 'JUL',
+    title: 'Stavanger',
+    subtitle: 'Bytur med oljemuseum',
+    activities: [
+      { time: 'Formiddag', title: 'Kør til Stavanger', desc: '~1½ time. Park i centrum og gå rundt i Gamle Stavanger med de hvide træhuse.', tags: ['kørsel'] },
+      { time: 'Frokost', title: 'Frokost i Stavanger', desc: 'Børnevenlig café eller fish &amp; chips ved havnen.', tags: ['mad'] },
+      { time: 'Eftermiddag', title: 'Norsk Oljemuseum', desc: 'Interaktivt og rigtig spændende for både børn og voksne. <a href="https://www.norskolje.museum.no/en/" target="_blank" rel="noopener">norskolje.museum.no</a>.', tags: ['indendørs', 'kultur'] },
+      { time: 'Sen eftermiddag', title: 'Slik &amp; is på vejen hjem', desc: 'Stop ved en købmand og forsyn dig med norsk slik (det er bare bedre).', tags: ['hygge'] },
+      { time: 'Aften', title: 'Restaurant-aften 🍽', desc: 'Vi spiser ude — find et sted i Stavanger inden vi kører hjem, eller en lokal restaurant i Sirdal.', tags: ['mad'] }
+    ]
+  },
+  {
+    date: '2026-07-27', weekday: 'Man', day: 27, month: 'JUL',
+    title: 'Kjeragbolten & Lysevegen',
+    subtitle: 'Eventyrlystens dag',
+    activities: [
+      { time: 'Tidlig', title: 'Afgang mod Kjerag', desc: 'Kør Lysevegen — én af Norges mest spektakulære veje med 27 hårnålesving. Ca. 1½t.', tags: ['kørsel'] },
+      { time: 'Formiddag', title: 'Vandring til Kjeragbolten', desc: 'Den berømte sten klemt mellem to klipper 1000m over fjorden. Turen er 11 km t/r, krævende. <a href="https://www.visitnorway.no/listings/kjeragbolten/19737/" target="_blank" rel="noopener">Info hos VisitNorway</a>.', tags: ['vandring', 'krævende'] },
+      { time: 'Alternativ', title: 'Køretur på Lysevegen', desc: 'For dem der ikke vandrer: køreturen alene er en oplevelse. Stop ved Øygardstølen for udsigt.', tags: ['kørsel'] },
+      { time: 'Aften', title: 'Aftensmad: Pasta carbonara', desc: 'Mette & Lars har madansvar (2. aften). Hurtig og mættende efter en lang dag — med bacon, parmesan og frisk peber.', tags: ['mad'] }
+    ]
+  },
+  {
+    date: '2026-07-28', weekday: 'Tir', day: 28, month: 'JUL',
+    title: 'Roligere dag & afslutning',
+    subtitle: 'Vi nyder det sidste',
+    activities: [
+      { time: 'Formiddag', title: 'Lifttur ved Tjørholmfjellet', desc: 'Tag liften op og nyd udsigten — eller gå turen, hvis I har gnist i benene endnu.', tags: ['aktivitet'] },
+      { time: 'Frokost', title: 'Picnic ved Dorgefossen', desc: 'Spektakulært vandfald. Tag madpakker med og spis på klipperne i nærheden.', tags: ['oplevelse'] },
+      { time: 'Eftermiddag', title: 'Fiskeri eller Vandpark', desc: 'Børnene kan fiske i Sirdalsvatnet, eller hele banden kan tage til <a href="https://www.sirdalbadeland.no/" target="_blank" rel="noopener">Sirdal Badeland</a> hvis vejret er gråt.', tags: ['aktivitet', 'regn'] },
+      { time: 'Aften', title: 'Aftensmad: Burgers &amp; pommes frites', desc: 'Camilla & Morten har madansvar (2. aften). Hjemmelavede burgers, coleslaw og sennepsmajo. Børnene jubler.', tags: ['mad'] },
+      { time: 'Sent', title: 'Sidste aften: spil, fortællinger &amp; afsked', desc: 'Hitster, Bezzerwisser, Wii — og en sidste tur ud at se på stjernerne.', tags: ['hygge'] }
+    ]
+  },
+  {
+    date: '2026-07-29', weekday: 'Ons', day: 29, month: 'JUL',
+    title: 'Hjemrejse',
+    subtitle: 'Farvel til fjeldene',
+    activities: [
+      { time: 'Morgen', title: 'Morgenmad sammen', desc: 'Alle hjælper. Vi spiser det sidste af det vi har.', tags: ['mad'] },
+      { time: 'Inden kl. 11', title: 'Udtjek senest kl. 11:00', desc: 'Pak bilen, ryd hytten, gør rent — alle hjælper hinanden.', tags: ['praktisk'] },
+      { time: 'Hjem', title: 'God tur hjem', desc: 'Tak for en uge i de norske fjelde 🇳🇴', tags: ['afsked'] }
+    ]
+  }
+];
+
+window.MEALS = [
+  { date: '22. jul', day: 'Ons', breakfast: '—', breakfastChef: 'På vejen', dinner: 'Velkomst-tacos', dinnerChef: 'Fælles' },
+  { date: '23. jul', day: 'Tor', breakfast: 'Klassisk morgenmad', breakfastChef: 'Mette & Morten', dinner: 'Grillaften: Kyllingespyd & pølser', dinnerChef: 'Mette & Lars' },
+  { date: '24. jul', day: 'Fre', breakfast: 'Klassisk morgenmad', breakfastChef: 'Lars & Gitte', dinner: 'Lasagne m. salat & hvidløgsbrød', dinnerChef: 'Camilla & Morten' },
+  { date: '25. jul', day: 'Lør', breakfast: 'Klassisk morgenmad', breakfastChef: 'Camilla & Chresten', dinner: 'Fiskefrikadeller m. persillesovs', dinnerChef: 'Gitte & Chresten' },
+  { date: '26. jul', day: 'Søn', breakfast: 'Klassisk morgenmad', breakfastChef: 'Lars & Camilla', dinner: 'Restaurant-aften ude 🍽', dinnerChef: 'Ude' },
+  { date: '27. jul', day: 'Man', breakfast: 'Klassisk morgenmad', breakfastChef: 'Mette & Chresten', dinner: 'Pasta carbonara', dinnerChef: 'Mette & Lars' },
+  { date: '28. jul', day: 'Tir', breakfast: 'Klassisk morgenmad', breakfastChef: 'Gitte & Morten', dinner: 'Hjemmelavede burgers & fries', dinnerChef: 'Camilla & Morten' },
+  { date: '29. jul', day: 'Ons', breakfast: 'Fælles morgenmad', breakfastChef: 'Alle', dinner: 'Hjemme 🏡', dinnerChef: '—' }
+];
+
+window.ATTRACTIONS = [
+  { name: 'Preikestolen', art: 'art-rock', diff: 'medium', diffLabel: 'Mellem',
+    desc: 'Den ikoniske 604m høje klippe over Lysefjorden. En af Norges mest fotograferede steder.',
+    meta: [['⏱', '4-5 timer t/r'], ['📏', '8 km'], ['⬆', '500m stigning']],
+    link: 'https://www.visitnorway.no/reisemal/fjord-norge/lysefjorden/preikestolen/' },
+  { name: 'Kjeragbolten', art: 'art-mountain', diff: 'hard', diffLabel: 'Krævende',
+    desc: 'Sten klemt mellem to klipper 1000m over fjorden. Krævende vandring, men en oplevelse for livet.',
+    meta: [['⏱', '6-10 timer'], ['📏', '11 km'], ['⬆', '800m stigning']],
+    link: 'https://www.visitnorway.no/listings/kjeragbolten/19737/' },
+  { name: 'Lysefjorden Cruise', art: 'art-fjord', diff: 'easy', diffLabel: 'Let',
+    desc: 'Sejlads forbi vandfald, klippevægge og Preikestolen set fra vandet. Også børnevenlig.',
+    meta: [['⏱', '2-3 timer'], ['⛴', 'Fra Lauvvik/Forsand'], ['👶', 'Familievenlig']],
+    link: 'https://www.rodne.no/en/lysefjorden-cruise-2/' },
+  { name: 'Norsk Oljemuseum', art: 'art-city', diff: 'easy', diffLabel: 'Indendørs',
+    desc: 'Interaktivt museum i Stavanger om Norges oliehistorie. Fanger både børn og voksne.',
+    meta: [['⏱', '2-3 timer'], ['📍', 'Stavanger'], ['☔', 'God i regnvejr']],
+    link: 'https://www.norskolje.museum.no/' },
+  { name: 'Lysevegen', art: 'art-mountain', diff: 'easy', diffLabel: 'Køretur',
+    desc: '27 hårnålesving op fra fjorden — én af Norges mest spektakulære bjergveje. Stop ved Øygardstølen.',
+    meta: [['⏱', '1-2 timer'], ['🚗', 'Køretur'], ['📷', 'Fotostop']],
+    link: 'https://www.visitnorway.no/listings/lysevegen/213907/' },
+  { name: 'Stavanger', art: 'art-city', diff: 'easy', diffLabel: 'Bytur',
+    desc: 'Hyggelig by med "Gamle Stavanger" — hvide træhuse, brostensgader og masser af cafeer.',
+    meta: [['⏱', '½ dag'], ['🚗', '1½ time'], ['🍦', 'Cafeer & is']],
+    link: 'https://www.visitnorway.no/reisemal/fjord-norge/stavanger/' },
+  { name: 'Dorgefossen', art: 'art-water', diff: 'easy', diffLabel: 'Let',
+    desc: 'Spektakulært vandfald nær Sirdal. Kort vandring og perfekt picnic-spot.',
+    meta: [['⏱', '1 time'], ['📷', 'Fotospot'], ['🥪', 'Picnic']],
+    link: 'https://www.sirdalsferie.no/' },
+  { name: 'Tjørholmfjellet', art: 'art-forest', diff: 'easy', diffLabel: 'Let',
+    desc: 'Lifttur op til toppen for fantastisk udsigt. Også populært til fjellgolf og disc-golf.',
+    meta: [['⏱', '2-3 timer'], ['🚡', 'Lifttur'], ['⛳', 'Disc-golf']],
+    link: 'https://www.sirdalsferie.no/' },
+  { name: 'Sirdal Badeland', art: 'art-water', diff: 'easy', diffLabel: 'Familie',
+    desc: 'Indendørs vandpark med rutsjebaner og bølgebassin — perfekt redningsplan i regnvejr.',
+    meta: [['☔', 'Indendørs'], ['👨‍👩‍👧', 'Børnevenlig'], ['🏊', 'Bassiner']],
+    link: 'https://www.sirdalbadeland.no/' }
+];
+
+/* =====================================================================
+   MEDBRING-LISTE — seedet fra Excel-arket "Medbringes".
+   Hver linje: id (unik), cat (kategori), name, samt evt. "pre" = de
+   familier der allerede var sat i Excel, og "note".
+   "pre" bliver kun brugt FØRSTE gang siden åbnes (som udgangspunkt).
+   Bagefter styres alt af de valg I laver i selve appen.
+   ===================================================================== */
+window.BRING_ITEMS = [
+  // --- Morgenmad ---
+  { id: 'm-a38',        cat: 'Morgenmad', name: 'A38' },
+  { id: 'm-aeg',        cat: 'Morgenmad', name: 'Æg' },
+  { id: 'm-cornflakes', cat: 'Morgenmad', name: 'Corn flakes' },
+  { id: 'm-gaer',       cat: 'Morgenmad', name: 'Gær' },
+  { id: 'm-havregryn',  cat: 'Morgenmad', name: 'Havregryn' },
+  { id: 'm-kaffe',      cat: 'Morgenmad', name: 'Kaffe' },
+  { id: 'm-maelk',      cat: 'Morgenmad', name: 'Mælk' },
+  { id: 'm-marmelade',  cat: 'Morgenmad', name: 'Marmelade' },
+  { id: 'm-mel',        cat: 'Morgenmad', name: 'Mel' },
+  { id: 'm-mysli',      cat: 'Morgenmad', name: 'Mysli' },
+  { id: 'm-nutella',    cat: 'Morgenmad', name: 'Nutella' },
+  { id: 'm-ost',        cat: 'Morgenmad', name: 'Ost' },
+  { id: 'm-paalaegschok', cat: 'Morgenmad', name: 'Pålægschokolade' },
+  { id: 'm-peanutbutter', cat: 'Morgenmad', name: 'Peanutbutter' },
+  { id: 'm-smoer',      cat: 'Morgenmad', name: 'Smør' },
+  { id: 'm-te',         cat: 'Morgenmad', name: 'Te' },
+
+  // --- Frokost ---
+  { id: 'f-agurker',    cat: 'Frokost', name: 'Agurker' },
+  { id: 'f-groentsager',cat: 'Frokost', name: 'Grøntsager' },
+  { id: 'f-hotdogbroed',cat: 'Frokost', name: 'Hotdogbrød' },
+  { id: 'f-hotdogpoels',cat: 'Frokost', name: 'Hotdogpølser' },
+  { id: 'f-hummus',     cat: 'Frokost', name: 'Hummus' },
+  { id: 'f-karrysalat', cat: 'Frokost', name: 'Karrysalat' },
+  { id: 'f-ketchup',    cat: 'Frokost', name: 'Ketchup' },
+  { id: 'f-leverpostej',cat: 'Frokost', name: 'Leverpostej' },
+  { id: 'f-makrel',     cat: 'Frokost', name: 'Makrel' },
+  { id: 'f-mayo',       cat: 'Frokost', name: 'Mayo' },
+  { id: 'f-remoulade',  cat: 'Frokost', name: 'Remoulade' },
+  { id: 'f-ristedeloeg',cat: 'Frokost', name: 'Ristede løg' },
+  { id: 'f-roastbeef',  cat: 'Frokost', name: 'Roastbeef' },
+  { id: 'f-roedbeder',  cat: 'Frokost', name: 'Rødbeder' },
+  { id: 'f-rugbroed',   cat: 'Frokost', name: 'Rugbrød' },
+  { id: 'f-sennep',     cat: 'Frokost', name: 'Sennep' },
+  { id: 'f-sild',       cat: 'Frokost', name: 'Sild' },
+  { id: 'f-spegepoelse',cat: 'Frokost', name: 'Spegepølse' },
+
+  // --- Diverse ---
+  { id: 'd-affaldsposer', cat: 'Diverse', name: 'Affaldsposer' },
+  { id: 'd-aperitif',     cat: 'Diverse', name: 'Aperitif' },
+  { id: 'd-bagepapir',    cat: 'Diverse', name: 'Bagepapir' },
+  { id: 'd-chips',        cat: 'Diverse', name: 'Chips' },
+  { id: 'd-chokolade',    cat: 'Diverse', name: 'Chokolade' },
+  { id: 'd-cola',         cat: 'Diverse', name: 'Cola' },
+  { id: 'd-drikkevarer',  cat: 'Diverse', name: 'Drikkevarer' },
+  { id: 'd-film',         cat: 'Diverse', name: 'Film' },
+  { id: 'd-frugt',        cat: 'Diverse', name: 'Frugt' },
+  { id: 'd-haandsaebe',   cat: 'Diverse', name: 'Håndsæbe' },
+  { id: 'd-juice',        cat: 'Diverse', name: 'Juice?' },
+  { id: 'd-kaffefiltre',  cat: 'Diverse', name: 'Kaffefiltre' },
+  { id: 'd-kakao',        cat: 'Diverse', name: 'Kakao' },
+  { id: 'd-knaekbroed',   cat: 'Diverse', name: 'Knækbrød' },
+  { id: 'd-koekkenrulle', cat: 'Diverse', name: 'Køkkenrulle' },
+  { id: 'd-lys',          cat: 'Diverse', name: 'Lys' },
+  { id: 'd-olie',         cat: 'Diverse', name: 'Olie' },
+  { id: 'd-opvaskemiddel',cat: 'Diverse', name: 'Opvaskemiddel' },
+  { id: 'd-opvasketabs',  cat: 'Diverse', name: 'Opvasketabs' },
+  { id: 'd-plastikposer', cat: 'Diverse', name: 'Plastikposer' },
+  { id: 'd-saft',         cat: 'Diverse', name: 'Saft' },
+  { id: 'd-saltpeber',    cat: 'Diverse', name: 'Salt og peber' },
+  { id: 'd-slik',         cat: 'Diverse', name: 'Slik' },
+  { id: 'd-taendstikker', cat: 'Diverse', name: 'Tændstikker' },
+  { id: 'd-toiletpapir',  cat: 'Diverse', name: 'Toiletpapir' },
+
+  // --- Praktisk ---
+  { id: 'p-karklude',    cat: 'Praktisk', name: '3 karklude', note: 'Tag 3 stk med hver, så der er nyt til hver dag' },
+  { id: 'p-viskestykker',cat: 'Praktisk', name: '3 viskestykker', note: 'Tag 3 stk med hver, så der er nyt til hver dag' }
+];
+
+window.BRING_CATEGORIES = ['Morgenmad', 'Frokost', 'Diverse', 'Praktisk'];
+
+/* =====================================================================
+   FÆLLES TING — seedet fra Excel-arket "Ekstra".
+   Frie ting man tager med: brætspil, højttaler, snittekniv osv.
+   Disse indsættes kun første gang; derefter kan alle tilføje/redigere.
+   ===================================================================== */
+window.CUSTOM_SEED = [
+  { name: 'Hitster', family: 'ML' },
+  { name: 'Bezzerwisser', family: 'ML' },
+  { name: 'Whiskey fra den finske julemand', family: 'CM' },
+  { name: 'Nogle spil (udfyldes senere hvilke)', family: 'CM' },
+  { name: 'Wii (med HDMI-kabel)', family: 'LA' }
+];

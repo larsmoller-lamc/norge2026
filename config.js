@@ -12,7 +12,7 @@ window.APP_CONFIG = {
     lon: 6.850
   },
 
-  /* Link til den fulde YR-side for stedet (vises som knap i vejr-sektionen). */
+  /* Link til den fulde YR-side for stedet (vises som knap i vejr-sektionen).  */
   yrUrl: 'https://www.yr.no/nb/v%C3%A6rvarsel/daglig-tabell/2-3138888/Norge/Rogaland/Sirdal/Sinnes',
 
   /* -------------------------------------------------------------------

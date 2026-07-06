@@ -5,7 +5,7 @@
 (function () {
   var LS_KEY = 'sirdal2026_state_v1';
   var listeners = [];
-  var state = { bring: {}, custom: {}, meta: {} };
+  var state = { bring: {}, custom: {}, userItems: {}, meta: {} };
   var mode = 'local';
   var fbRef = null;
   var applyingRemote = false;
@@ -26,12 +26,16 @@
     try {
       var raw = localStorage.getItem(LS_KEY);
       var s = raw ? JSON.parse(raw) : {};
-      state = { bring: s.bring || {}, custom: s.custom || {}, meta: s.meta || {} };
+      state = { bring: s.bring || {}, custom: s.custom || {}, userItems: s.userItems || {}, meta: s.meta || {} };
       if (Array.isArray(state.custom)) {
         var obj = {}; state.custom.forEach(function (c) { if (c && c.id) obj[c.id] = c; });
         state.custom = obj;
       }
-    } catch (e) { state = { bring: {}, custom: {}, meta: {} }; }
+      if (Array.isArray(state.userItems)) {
+        var u = {}; state.userItems.forEach(function (x) { if (x && x.id) u[x.id] = x; });
+        state.userItems = u;
+      }
+    } catch (e) { state = { bring: {}, custom: {}, userItems: {}, meta: {} }; }
   }
   function saveLocal() {
     try { localStorage.setItem(LS_KEY, JSON.stringify(state)); } catch (e) {}
@@ -62,7 +66,9 @@
           applyingRemote = true;
           var c = val.custom || {};
           if (Array.isArray(c)) { var obj = {}; c.forEach(function (x) { if (x && x.id) obj[x.id] = x; }); c = obj; }
-          state = { bring: val.bring || {}, custom: c, meta: val.meta || {} };
+          var u = val.userItems || {};
+          if (Array.isArray(u)) { var uo = {}; u.forEach(function (x) { if (x && x.id) uo[x.id] = x; }); u = uo; }
+          state = { bring: val.bring || {}, custom: c, userItems: u, meta: val.meta || {} };
           applyingRemote = false;
           emit();
         });
@@ -122,6 +128,22 @@
     getState: function () { return state; },
     getMode: function () { return mode; },
     customList: customList,
+
+    /* Samlet liste = standard BRING_ITEMS + brugertilføjede.
+       Bruges af bring.js til rendering. */
+    bringItems: function () {
+      var arr = (window.BRING_ITEMS || []).slice();
+      for (var k in state.userItems) {
+        if (state.userItems.hasOwnProperty(k)) arr.push(state.userItems[k]);
+      }
+      return arr;
+    },
+    userItemsList: function () {
+      var arr = [];
+      for (var k in state.userItems) if (state.userItems.hasOwnProperty(k)) arr.push(state.userItems[k]);
+      return arr;
+    },
+
     subscribe: function (fn) { listeners.push(fn); return function () { listeners = listeners.filter(function (x) { return x !== fn; }); }; },
 
     getItem: function (id) { return state.bring[id] || { done: false }; },
@@ -133,6 +155,22 @@
     toggleDone: function (id) {
       var e = state.bring[id] || { done: false };
       updatePath('bring/' + id + '/done', !e.done);
+    },
+
+    /* Brugertilføjede medbring-ting. Har samme struktur som BRING_ITEMS
+       ({id, cat, name}), så resten af rendering-logikken virker uændret.
+       Gemmes separat i state.userItems så vi ikke muterer den statiske liste. */
+    addBringItem: function (name, cat) {
+      var id = 'u' + Date.now() + Math.floor(Math.random() * 1000);
+      updatePath('userItems/' + id, { id: id, name: name, cat: cat, userAdded: true });
+      return id;
+    },
+    removeBringItem: function (id) {
+      /* Kun brugertilføjede kan slettes — standard-varer består. */
+      if (!state.userItems[id]) return;
+      removePath('userItems/' + id);
+      /* Fjern også evt. tilhørende bring-state (fluebenene) */
+      if (state.bring[id]) removePath('bring/' + id);
     },
 
     addCustom: function (item) {
@@ -158,13 +196,15 @@
         var d = JSON.parse(json);
         var c = d.custom || {};
         if (Array.isArray(c)) { var obj = {}; c.forEach(function (x) { if (x && x.id) obj[x.id] = x; }); c = obj; }
-        state = { bring: d.bring || {}, custom: c, meta: d.meta || {} };
+        var u = d.userItems || {};
+        if (Array.isArray(u)) { var uo = {}; u.forEach(function (x) { if (x && x.id) uo[x.id] = x; }); u = uo; }
+        state = { bring: d.bring || {}, custom: c, userItems: u, meta: d.meta || {} };
         if (mode === 'firebase' && fbRef) { fbRef.set(state); } else { saveLocal(); emit(); }
         return true;
       } catch (e) { return false; }
     },
     resetAll: function () {
-      state = { bring: {}, custom: {}, meta: {} };
+      state = { bring: {}, custom: {}, userItems: {}, meta: {} };
       if (mode === 'firebase' && fbRef) { fbRef.set(state); } else { saveLocal(); emit(); }
     }
   };

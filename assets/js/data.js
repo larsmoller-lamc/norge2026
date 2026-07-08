@@ -110,8 +110,8 @@ window.DAYS = [
 ];
 
 window.MEALS = [
-  { date: '22. jul', day: 'Ons', breakfast: '—', breakfastChef: 'På vejen', dinner: 'Velkomst-tacos', dinnerChef: 'Fælles' },
-  { date: '23. jul', day: 'Tor', breakfast: 'Klassisk morgenmad', breakfastChef: 'Mette & Morten', dinner: 'Grillaften: Ørred el. laks og pølser', dinnerChef: 'Mette & Lars' },
+  { date: '22. jul', day: 'Ons', breakfast: '—', breakfastChef: 'På vejen', dinner: 'Velkomst-tacos', dinnerChef: 'Mette & Lars' },
+  { date: '23. jul', day: 'Tor', breakfast: 'Klassisk morgenmad', breakfastChef: 'Mette & Morten', dinner: 'Grillaften: Ørred el. laks og pølser', dinnerChef: 'Gitte & Chresten' },
   { date: '24. jul', day: 'Fre', breakfast: 'Klassisk morgenmad', breakfastChef: 'Lars & Gitte', dinner: 'Norske "frikadeller" i brun sovs', dinnerChef: 'Camilla & Morten' },
   { date: '25. jul', day: 'Lør', breakfast: 'Klassisk morgenmad', breakfastChef: 'Camilla & Chresten', dinner: 'Restaurant-aften ude 🍽', dinnerChef: 'Ude' },
   { date: '26. jul', day: 'Søn', breakfast: 'Klassisk morgenmad', breakfastChef: 'Lars & Camilla', dinner: 'Pasta carbonara', dinnerChef: 'Gitte & Chresten' },

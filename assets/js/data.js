@@ -30,24 +30,26 @@ window.DAYS = [
   },
   {
     date: '2026-07-23', weekday: 'Tor', day: 23, month: 'JUL',
-    title: 'Let dag lokalt',
-    subtitle: 'Vandfald, klatrepark og kano',
+    title: 'Første fjelddag',
+    subtitle: 'Røseknuten, vandfald og fiskeri',
     activities: [
-      { time: 'Formiddag', title: 'Kort vandring til Dorgefossen', desc: 'Spektakulært vandfald i en dyb kløft, ca. 30 min fra hytten. Kort gåtur fra p-plads til udsigtsplatform. Picnicborde og "Håvardsteinen" — en 3.200 kg sten som en stærk sirdøl angiveligt løftede med håndkraft.', tags: ['vandring', 'sol'] },
-      { time: 'Frokost', title: 'Madpakke på klipperne', desc: 'Vi spiser ved Dorgefossen med udsigt til vandfaldet — kun naturen som restaurant.', tags: ['mad'] },
-      { time: 'Eftermiddag', title: 'Sirdal Fjellpark: split-op', desc: 'Aktivitetscentret ved Tjørholmfjellet — klatrepark, mountain carts, frisbee-golf eller kano/SUP på søen. Familierne kan splitte op efter humør. Ca. 10 min fra hytten.', tags: ['aktivitet'] },
+      { time: 'Formiddag', title: 'Vandring til Røseknuten', desc: 'Familievenlig topvandring med sagn om en trold og troldefodspor undervejs — 8 km t/r i moderat tempo. God rute at starte ugen med. <em>For de vandreivrige findes en længere og mere krævende variant (11-12 km med større stigning) op fra bunden — kan aftales på dagen.</em>', tags: ['vandring', 'sol'] },
+      { time: 'På vej hjem', title: 'Stop ved Dorgefossen', desc: 'Vi kører forbi det spektakulære vandfald i den dybe kløft. Kort gåtur fra p-plads til udsigtsplatform. Picnicborde og "Håvardsteinen" — en 3.200 kg sten som en stærk sirdøl angiveligt løftede med håndkraft.', tags: ['vandring'] },
+      { time: 'Frokost', title: 'Frokost undervejs', desc: 'Vi spiser madpakker ved Dorgefossen eller tilbage på hytten — afhænger af hvor sultne vi er.', tags: ['mad'] },
+      { time: 'Eftermiddag', title: 'Fiskeri i Sirdal', desc: 'Fisketur ved Sirdalsvatnet eller en af de mange fjeldsøer. <strong>Fiskekort er påkrævet</strong> — købes via <a href="https://www.inatur.no/" target="_blank" rel="noopener">inatur.no</a> eller lokalt hos Joker/Coop. Husk grej!', tags: ['aktivitet'] },
+      { time: 'Eftermiddag', title: 'Vandaktiviteter i Sirdal Fjellpark', desc: 'For dem der ikke fisker: kano og SUP på Sirdalsvatnet direkte ved Fjellparken. Ca. 10 min fra hytten. Familierne kan splitte op efter humør.', tags: ['aktivitet'] },
       { time: 'Aften', title: 'Grillaften: Ørred eller laks + pølser', desc: 'Mette & Lars har madansvar. Fisken pakkes ind i folie med citron, dild og smør — pølser og hjemmebagt focaccia på siden. Nye kartofler og sommersalat.', tags: ['mad'] }
     ]
   },
   {
     date: '2026-07-24', weekday: 'Fre', day: 24, month: 'JUL',
-    title: 'Lysefjorden',
-    subtitle: 'Den store sejltur',
+    title: 'Stavanger',
+    subtitle: 'Oljemuseum og byvandring',
     activities: [
-      { time: 'Morgen', title: 'Tidlig morgenmad', desc: 'Vi spiser tidligt for at nå cruiset fra Stavanger.', tags: ['mad'] },
-      { time: 'Formiddag', title: 'Kør til Stavanger', desc: '~1½ time. Rødne Fjord Cruise afgår fra Strandkaien i centrum.', tags: ['kørsel'] },
-      { time: '11–14', title: 'Fjordcruise på Lysefjorden', desc: 'Sejlads på eldrevet katamaran forbi Fantahålå (fredløseshule), Hengjanefossen-vandfaldet og Preikestolen set fra vandet. 3-3½ timer. <a href="https://rodne.no/en/fjord-experiences/stavanger/fjordcruise-lysefjord-preikestolen/" target="_blank" rel="noopener">Rødne Fjord Cruise</a>.', tags: ['oplevelse', 'sol'] },
-      { time: 'Eftermiddag', title: 'Slik-stop på vejen hjem', desc: 'Forsyn dig med norsk slik i en Joker eller Coop — det er bare bedre end det danske.', tags: ['hygge'] },
+      { time: 'Formiddag', title: 'Kør til Stavanger', desc: '~1½ time. Park i centrum og gå rundt i Gamle Stavanger — 173 fredede hvide træhuse fra 1700-tallet og brostensgader.', tags: ['kørsel'] },
+      { time: 'Frokost', title: 'Frokost ved havnen', desc: 'Fish &amp; chips ved fiskemarkedet, eller børnevenlig café i Øvre Holmegate ("Fargegata") med regnbue-facader.', tags: ['mad'] },
+      { time: 'Eftermiddag', title: 'Norsk Oljemuseum', desc: 'Interaktivt museum — bygningen ligner selv en boreplatform. Rutsjebane, katastrofe-rum og klatre-platform for børnene. Voksne 180 NOK, børn 4-16 år 60 NOK, familie 420 NOK. <a href="https://www.norskolje.museum.no/en/" target="_blank" rel="noopener">norskolje.museum.no</a>.', tags: ['indendørs', 'kultur'] },
+      { time: 'Sen eftermiddag', title: 'Byvandring i Gamle Stavanger', desc: 'Gå gennem de fredede træhuse og ned til fiskemarkedet. Slik-stop hos Joker eller Coop på vejen hjem — norsk slik er bare bedre end det danske.', tags: ['hygge'] },
       { time: 'Aften', title: 'Aftensmad: Norske "kjøttkaker" i brun sovs', desc: 'Camilla & Morten har madansvar. Norges svar på frikadeller — hakket oksekød med muskatnød, serveret med brun sovs, kogte kartofler og tyttebærsyltetøj. Klassisk norsk husmandskost.', tags: ['mad'] }
     ]
   },
@@ -64,24 +66,24 @@ window.DAYS = [
   },
   {
     date: '2026-07-26', weekday: 'Søn', day: 26, month: 'JUL',
-    title: 'Stavanger',
-    subtitle: 'Bytur med oljemuseum',
+    title: 'Sejltur på Lysefjorden',
+    subtitle: 'Hurtigfærge fra Lauvvik',
     activities: [
-      { time: 'Formiddag', title: 'Kør til Stavanger', desc: '~1½ time. Park i centrum og gå rundt i Gamle Stavanger — 173 fredede hvide træhuse fra 1700-tallet og brostensgader.', tags: ['kørsel'] },
-      { time: 'Frokost', title: 'Frokost ved havnen', desc: 'Fish &amp; chips ved fiskemarkedet, eller børnevenlig café i Øvre Holmegate ("Fargegata") med regnbue-facader.', tags: ['mad'] },
-      { time: 'Eftermiddag', title: 'Norsk Oljemuseum', desc: 'Interaktivt museum — bygningen ligner selv en boreplatform. Rutsjebane, katastrofe-rum og klatre-platform for børnene. Voksne 180 NOK, børn 4-16 år 60 NOK, familie 420 NOK. <a href="https://www.norskolje.museum.no/en/" target="_blank" rel="noopener">norskolje.museum.no</a>.', tags: ['indendørs', 'kultur'] },
-      { time: 'Sen eftermiddag', title: 'Kør tilbage til hytten', desc: 'Stop evt. ved en Coop og fyld op med aftensmad-ingredienser.', tags: ['kørsel'] },
+      { time: 'Formiddag', title: 'Kør til Lauvvik', desc: '~1t 15min til Lauvvik færgekaj. Vi tager madpakker med. Ingen 27 hårnålesving på denne rute — den tur gemmer vi til mandag.', tags: ['kørsel'] },
+      { time: 'Middag', title: 'Hurtigfærge Lauvvik → Lysebotn → Lauvvik', desc: 'Passagerfærge (rute 561) gennem hele Lysefjorden. 1t 15min hver vej, ca. 2½ time samlet returtur. Vi passerer Preikestolen og Kjeragbolten set fra vandet — de fjelde vi ellers går på. Billetter skal bestilles på forhånd. <a href="https://www.kolumbus.no/globalassets/ruter/baatruter/561-26-02.pdf" target="_blank" rel="noopener">Se afgangstider (Kolumbus rute 561)</a>.', tags: ['oplevelse', 'sol'] },
+      { time: 'På vej hjem', title: 'Frokoststop i naturen', desc: 'Vi finder et smukt sted undervejs — enten på turen til Lauvvik eller på vej hjem — og spiser vores medbragte madpakker med udsigt.', tags: ['mad'] },
       { time: 'Aften', title: 'Aftensmad: Pasta carbonara', desc: 'Gitte & Chresten har madansvar. Ægte italiensk carbonara med guanciale (eller bacon), pecorino, æggeblomme og masser af friskkværnet peber. Grov salat og hvidløgsbrød ved siden. Nemt at lave i store portioner efter en lang dag.', tags: ['mad'] }
     ]
   },
   {
     date: '2026-07-27', weekday: 'Man', day: 27, month: 'JUL',
-    title: 'Mixet fjelddag',
-    subtitle: 'Køretur, top og adrenalin',
+    title: 'Lysevegen & Kjerag-området',
+    subtitle: 'Hårnålesving, kort vandring og udsigt fra Ørneredet',
     activities: [
-      { time: 'Formiddag', title: 'Lysevegen — scenic drive', desc: '27 hårnålesving og 900m højdeforskel mellem Sirdal og Lysebotn. Én af Norges mest spektakulære bjergveje. Stop ved Øygardstølen ("Ørneredet") for panoramaudsigten. Ca. 1 time hver vej.', tags: ['kørsel', 'sol'] },
-      { time: 'Alternativ', title: 'Kjeragbolten for de vandreivrige', desc: 'De hårdføre kan tage vandringen — 11 km t/r, 5-7 timer, tre stejle klatrepartier med kæder. Startsted er Øygardstølen. Ikke for højdeforskrækkede. <a href="https://kjerag.info/" target="_blank" rel="noopener">kjerag.info</a>.', tags: ['vandring', 'krævende'] },
-      { time: 'Eftermiddag', title: 'Røseknuten fra Tjørhomfjellet', desc: 'For dem der bliver hjemme: familievenlig topvandring — tag stoleliften op, gå til Røseknuten, og få udsigt til de fjelde vi så fra Lysefjorden fredag. 2-3 timer.', tags: ['vandring'] },
+      { time: 'Formiddag', title: 'Kør til Øygardstølen', desc: 'Ca. 1 time op til toppen af Lysevegen. Vi parkerer ved Øygardstølen ("Ørneredet") — betalingsparkering. Herfra har vi panoramaudsigt ned over Lysefjorden og de 27 hårnålesving.', tags: ['kørsel', 'sol'] },
+      { time: 'Formiddag', title: 'Kort vandring i Kjerag-området', desc: 'Vi går en kortere del af Kjerag-ruten — ikke helt til bolten (den fulde tur er 11 km med tre stejle kædepartier, for hårdt for alle). Ruten starter samme sted som den fulde vandring, så vi går indtil det passer, og vender om. Vandreivrige kan gå længere på egen hånd.', tags: ['vandring'] },
+      { time: 'Frokost', title: 'Frokost på Øygardstøl-restauranten', desc: 'Vi spiser frokost på restauranten på toppen af Lysevegen med udsigt til Lysefjorden. Norsk fjeldmad i storslået omgivelse.', tags: ['mad'] },
+      { time: 'Eftermiddag', title: 'Lysevegen ned og op igen — for de kørelystne', desc: 'For dem der har lyst kan vi køre ned ad de 27 hårnålesving mod Lysebotn og op igen. Én af Norges mest spektakulære bjergveje, 900m højdeforskel. Resten kan nyde udsigten fra toppen eller køre roligt hjem.', tags: ['kørsel'] },
       { time: 'Aften', title: 'Aftensmad: Rensdyrgryde', desc: 'Camilla & Morten har madansvar. Norsk fjeldklassiker med rensdyrkød (kan købes i Tonstad), champignoner, tyttebær og fløde. Serveres med kartoffelmos og syltede tyttebær. Nordisk komfort-mad i sin fineste form.', tags: ['mad'] }
     ]
   },
@@ -112,7 +114,7 @@ window.DAYS = [
 window.MEALS = [
   { date: '22. jul', day: 'Ons', breakfast: '—', breakfastChef: 'På vejen', dinner: 'Velkomst-tacos', dinnerChef: 'Mette & Lars' },
   { date: '23. jul', day: 'Tor', breakfast: 'Klassisk morgenmad', breakfastChef: 'Mette & Morten', dinner: 'Grillaften: Ørred el. laks og pølser', dinnerChef: 'Gitte & Chresten' },
-  { date: '24. jul', day: 'Fre', breakfast: 'Klassisk morgenmad', breakfastChef: 'Lars & Gitte', dinner: 'Norske "frikadeller" i brun sovs', dinnerChef: 'Camilla & Morten' },
+  { date: '24. jul', day: 'Fre', breakfast: 'Klassisk morgenmad', breakfastChef: 'Lars & Gitte', dinner: 'Norske "kjøttkaker" i brun sovs', dinnerChef: 'Camilla & Morten' },
   { date: '25. jul', day: 'Lør', breakfast: 'Klassisk morgenmad', breakfastChef: 'Camilla & Chresten', dinner: 'Restaurant-aften ude 🍽', dinnerChef: 'Ude' },
   { date: '26. jul', day: 'Søn', breakfast: 'Klassisk morgenmad', breakfastChef: 'Lars & Camilla', dinner: 'Pasta carbonara', dinnerChef: 'Gitte & Chresten' },
   { date: '27. jul', day: 'Man', breakfast: 'Klassisk morgenmad', breakfastChef: 'Mette & Chresten', dinner: 'Rensdyrgryde', dinnerChef: 'Camilla & Morten' },
@@ -132,8 +134,8 @@ window.ATTRACTIONS = [
     link: 'https://www.visitnorway.com/places-to-go/fjord-norway/ryfylke/the-lysefjord-area/hiking-to-preikestolen/' },
 
   { name: 'Røseknuten fra Tjørhomfjellet', art: 'art-mountain', diff: 'easy', diffLabel: 'Let',
-    desc: 'Familievenlig topvandring, oplagt at kombinere med stoleliften op. På toppen har man udsigt til de fjelde, man senere ser fra Lysefjorden. Grusvej og markerede stier.',
-    meta: [['⏱', '2-3 timer'], ['🚡', 'Lifttur op'], ['⬆', 'Moderat stigning'], ['🚗', '15 min']],
+    desc: 'Familievenlig topvandring, 8 km t/r i moderat tempo. Undervejs kan man finde troldefodspor og et lokalt sagn om en trold. På toppen har man udsigt til de fjelde, man senere ser fra Lysefjorden. <em>Der findes også en længere og mere krævende variant (11-12 km med større stigning) fra bunden for de vandreivrige.</em>',
+    meta: [['⏱', '3-4 timer'], ['📏', '8 km t/r'], ['⬆', 'Moderat stigning'], ['🚗', '15 min']],
     link: 'https://hoytlavt.no/sirdal/en/activities/other-activities/' },
 
   { name: 'Dorgefossen', art: 'art-water', diff: 'easy', diffLabel: 'Let',
@@ -152,6 +154,16 @@ window.ATTRACTIONS = [
     desc: 'Sejlads på eldrevet katamaran fra Stavanger gennem Lysefjorden. Passerer Fantahålå (fredløseshule), Hengjanefossen-vandfaldet (så tæt at man mærker sprayen) og Preikestolen set fra vandet. Waffles og kaffe ombord.',
     meta: [['⏱', '3-3½ timer'], ['⛴', 'Fra Stavanger'], ['👶', 'Familievenlig'], ['⚡', 'Elektrisk båd']],
     link: 'https://rodne.no/en/fjord-experiences/stavanger/fjordcruise-lysefjord-preikestolen/' },
+
+  { name: 'Lysefjord-færge (Lauvvik)', art: 'art-fjord', diff: 'easy', diffLabel: 'Familie',
+    desc: 'Passagerfærgen (Kolumbus rute 561) sejler t/r Lauvvik-Lysebotn gennem hele Lysefjorden. Man passerer Preikestolen og Kjeragbolten set fra vandet. Kortere og billigere end Rødne-cruiset, og man undgår de 27 hårnålesving. 1t 15min hver vej. Billetter bestilles på forhånd.',
+    meta: [['⏱', '2½ time t/r'], ['⛴', 'Fra Lauvvik'], ['🚗', '1t 15min til kaj'], ['📅', 'Book i forvejen']],
+    link: 'https://www.kolumbus.no/globalassets/ruter/baatruter/561-26-02.pdf' },
+
+  { name: 'Fiskeri i Sirdal', art: 'art-water', diff: 'easy', diffLabel: 'Aktivitet',
+    desc: 'Sirdal har mange fjeldsøer og elve med ørred og røje. Sirdalsvatnet lige ved hytten er oplagt. <strong>Fiskekort er påkrævet</strong> — købes online via <a href="https://www.inatur.no/" target="_blank" rel="noopener">inatur.no</a> eller lokalt hos Joker Sinnes / Coop Tonstad. Husk fiskestang, snøre og lokkemad.',
+    meta: [['🎣', 'Ørred & røje'], ['🎫', 'Fiskekort kræves'], ['🚗', 'Ved hytten'], ['👨‍👩‍👧', 'Alle aldre']],
+    link: 'https://www.inatur.no/' },
 
   { name: 'Kano & SUP på Sirdalsvatnet', art: 'art-water', diff: 'easy', diffLabel: 'Aktivitet',
     desc: 'Sirdal Fjellpark udlejer kanoer (3-4 personer pr. kano — perfekt til familier) og SUP-boards direkte ved klatreparken. En rolig eftermiddag på det spejlblanke fjeldvand.',

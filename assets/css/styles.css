@@ -153,7 +153,17 @@ section.content.alt { background: var(--paper); }
 .section-intro { font-size: 15px; color: var(--char-soft); margin-top: 12px; max-width: 600px; }
 
 /* ===== DAY TABS ===== */
-.day-tabs { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 22px 20px; margin: 0 -22px; -webkit-overflow-scrolling: touch; }
+
+.day-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 4px 0 20px;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
 .day-tabs::-webkit-scrollbar { display: none; }
 .day-tab { flex: 0 0 auto; scroll-snap-align: start; background: var(--paper); border: 1.5px solid var(--line); border-radius: var(--r-md); padding: 12px 14px; min-width: 78px; text-align: center; cursor: pointer; transition: all 0.25s ease; font-family: inherit; color: var(--char); }
 .day-tab:hover { transform: translateY(-2px); }

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1e3a52">
+  <title>På vej til Sirdal · Lars, Mette, Carl, Frederik &amp; William</title>
+  <meta name="description" content="Familiens tur til Norge, 20.–22. juli 2026 — via Oslo og Arendal.">
+  <meta name="robots" content="noindex,nofollow">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/arendal.css">
+</head>
+<body class="theme-blue">
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="top">
+    <div class="hero-photo"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+
+    <div class="hero-top">
+      <span>På vej til Sirdal</span>
+      <a class="hero-back" href="index.html">← Sirdal 2026</a>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Lars, Mette, Carl, Frederik &amp; William · sommeren 2026</div>
+      <h1>Norge<br><em>tur/retur</em></h1>
+      <div class="hero-meta">
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          20.–22. juli
+        </span>
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          5 personer
+        </span>
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Holte → Oslo → Arendal → Sinnes
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+  </header>
+
+  <!-- ===================== RUTE-BANNER (i stedet for countdown) ===================== -->
+  <div class="countdown route-banner">
+    <div class="countdown-label">Ruten på 3 dage</div>
+    <div class="route-strip">
+      <div class="route-node"><div class="route-city">Holte</div><div class="route-date">Ma 20/7</div></div>
+      <div class="route-line"></div>
+      <div class="route-node"><div class="route-city">Oslo</div><div class="route-date">Ma eftermiddag</div></div>
+      <div class="route-line"></div>
+      <div class="route-node"><div class="route-city">Arendal</div><div class="route-date">Ma aften – ti aften</div></div>
+      <div class="route-line"></div>
+      <div class="route-node"><div class="route-city">Sinnes</div><div class="route-date">On 22/7</div></div>
+    </div>
+  </div>
+
+  <!-- ===================== PROGRAM ===================== -->
+  <section class="content" id="program">
+    <div class="section-head">
+      <span class="section-kicker">Dag for dag</span>
+      <h2 class="section-title">Tre dages <em>tur</em></h2>
+      <p class="section-intro">Vælg en dag og se planen. Tider er cirka — tag det roligt undervejs.</p>
+    </div>
+    <div class="day-tabs" id="dayTabs"></div>
+    <div class="day-cards" id="dayCards"></div>
+  </section>
+
+  <!-- ===================== ARENDAL-KORT ===================== -->
+  <section class="content alt" id="kort">
+    <div class="section-head">
+      <span class="section-kicker">Hvor bor vi</span>
+      <h2 class="section-title">Arendal &amp; <em>omegn</em></h2>
+      <p class="section-intro">Hotellet, seværdighederne og parkeringen — alt inden for gåafstand eller kort køretur.</p>
+    </div>
+
+    <div class="address-card">
+      <div class="address-info">
+        <strong>Clarion Hotel Tyholmen</strong>
+        <span>Teaterplassen 2, 4801 Tyholmen, Norge</span>
+      </div>
+      <a class="address-action" href="https://www.google.com/maps/search/?api=1&query=Clarion+Hotel+Tyholmen+Arendal" target="_blank" rel="noopener">Åbn i kort →</a>
+    </div>
+
+    <div class="map-wrap">
+      <iframe
+        title="Kort over Arendal"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Clarion+Hotel+Tyholmen+Arendal&z=14&output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- ===================== SEVÆRDIGHEDER ===================== -->
+  <section class="content" id="attraktioner">
+    <div class="section-head">
+      <span class="section-kicker">Ude &amp; inde</span>
+      <h2 class="section-title">Seværdigheder i <em>Arendal</em></h2>
+      <p class="section-intro">De bedste stop — fra gåafstand fra hotellet til korte køreture ud i skærgården.</p>
+    </div>
+    <div class="attractions" id="attractions"></div>
+  </section>
+
+  <!-- ===================== PARKERING ===================== -->
+  <section class="content alt" id="parkering">
+    <div class="section-head">
+      <span class="section-kicker">Praktisk</span>
+      <h2 class="section-title">Parkering i <em>Arendal</em></h2>
+      <p class="section-intro">Alle p-huse er kommunale, døgnåbne og bruger nummerpladeregistrering.</p>
+    </div>
+    <div class="parking-list" id="parkingList"></div>
+  </section>
+
+  <!-- ===================== BADESTEDER ===================== -->
+  <section class="content" id="badning">
+    <div class="section-head">
+      <span class="section-kicker">Til drengene</span>
+      <h2 class="section-title">Bade<em>steder</em></h2>
+      <p class="section-intro">Fra byens badeanlæg få minutter fra hotellet til fine ferskvandssøer og regionens bedste sandstrand.</p>
+    </div>
+    <div class="beach-list" id="beachList"></div>
+  </section>
+
+  <!-- ===================== HOLDET ===================== -->
+  <section class="content alt" id="hold">
+    <div class="section-head">
+      <span class="section-kicker">Forturen</span>
+      <h2 class="section-title">Vores <em>hold</em></h2>
+      <p class="section-intro">Fem mand høj — inden vi møder de andre familier i Sinnes onsdag eftermiddag.</p>
+    </div>
+    <div class="crew" id="crew"></div>
+  </section>
+
+  <!-- ===================== PRAKTISK ===================== -->
+  <section class="content" id="praktisk">
+    <div class="section-head">
+      <span class="section-kicker">Godt at vide</span>
+      <h2 class="section-title">Praktisk &amp; <em>kørsel</em></h2>
+      <p class="section-intro">Færge, tider og køretider.</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>
+          <span class="info-card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          Tider &amp; færge
+        </h3>
+        <ul class="info-list">
+          <li><strong>Afgang</strong><span>Man 20. juli kl. 05:45 fra Arnevangen 35, Holte</span></li>
+          <li><strong>Færge</strong><span>Helsingør–Helsingborg kl. 06:30</span></li>
+          <li><strong>Oslo</strong><span>Ankomst ca. kl. 13:00 — frokost &amp; lidt sightseeing</span></li>
+          <li><strong>Arendal</strong><span>Ankomst Clarion Tyholmen ca. kl. 19:00</span></li>
+          <li><strong>Sinnes</strong><span>Ons 22. juli — check-in fra kl. 15:00</span></li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>
+          <span class="info-card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </span>
+          Køretider
+        </h3>
+        <ul class="info-list">
+          <li><strong>Holte→Helsingør</strong><span>ca. 40 min</span></li>
+          <li><strong>Færge</strong><span>ca. 20 min overfart</span></li>
+          <li><strong>Helsingborg→Oslo</strong><span>ca. 5 t 30 min</span></li>
+          <li><strong>Oslo→Arendal</strong><span>ca. 3 t 30 min</span></li>
+          <li><strong>Arendal→Sinnes</strong><span>ca. 3 t 30 min</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <p class="foot-quote">"Tre dage på vej sydover — inden vi når op på fjeldet."</p>
+    <p class="foot-meta">Holte <strong>·</strong> Oslo <strong>·</strong> Arendal <strong>·</strong> Sinnes</p>
+    <p class="foot-meta" style="margin-top:8px"><a href="index.html" style="color:inherit;opacity:0.7">← Tilbage til Sirdal 2026</a></p>
+  </footer>
+
+  <!-- ===================== BOTTOM NAV ===================== -->
+  <nav class="bottom-nav">
+    <a class="nav-btn" href="#top">Forside</a>
+    <a class="nav-btn" href="#program">Program</a>
+    <a class="nav-btn" href="#kort">Kort</a>
+    <a class="nav-btn" href="#attraktioner">Seværdigheder</a>
+    <a class="nav-btn" href="#parkering">Parkering</a>
+    <a class="nav-btn" href="#badning">Badning</a>
+    <a class="nav-btn" href="#hold">Hold</a>
+    <a class="nav-btn" href="#praktisk">Praktisk</a>
+  </nav>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="assets/js/arendal-data.js"></script>
+  <script src="assets/js/arendal.js"></script>
+</body>
+</html>

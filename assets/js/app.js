@@ -101,17 +101,38 @@
     });
   }
 
-  /* ---------- COUNTDOWN ---------- */
+  /* ---------- COUNTDOWN ----------
+     To faser:
+     1) Før indtjek: tæller ned til 22/7 kl. 15:00 (ankomst)
+     2) Efter indtjek: tæller ned til 29/7 kl. 11:00 (udtjek — tid tilbage af ferien)
+     3) Efter udtjek: viser afsluttet-besked
+  */
   function updateCountdown() {
-    var target = new Date('2026-07-22T15:00:00');
+    var checkin = new Date('2026-07-22T15:00:00');
+    var checkout = new Date('2026-07-29T11:00:00');
     var now = new Date();
-    var diff = (target - now) / 1000;
     var set = function (id, v) { var e = document.getElementById(id); if (e) e.textContent = v; };
-    if (diff < 0) {
+    var lbl = $('.countdown-label');
+
+    var target, labelText;
+    if (now < checkin) {
+      // Fase 1: op til indtjek
+      target = checkin;
+      labelText = null; // behold den oprindelige label fra HTML'en
+    } else if (now < checkout) {
+      // Fase 2: under opholdet — tæl ned til udtjek
+      target = checkout;
+      labelText = 'Tid tilbage af ferien';
+    } else {
+      // Fase 3: efter udtjek
       set('cd-d', '0'); set('cd-h', '0'); set('cd-m', '0'); set('cd-s', '0');
-      var lbl = $('.countdown-label'); if (lbl) lbl.textContent = 'I er fremme! 🎉';
+      if (lbl) lbl.textContent = 'Tak for turen! 🏔️';
       return;
     }
+
+    if (labelText && lbl && lbl.textContent !== labelText) lbl.textContent = labelText;
+
+    var diff = (target - now) / 1000;
     var d = Math.floor(diff / 86400); diff -= d * 86400;
     var h = Math.floor(diff / 3600); diff -= h * 3600;
     var m = Math.floor(diff / 60); diff -= m * 60;
@@ -140,7 +161,20 @@
         + '<div class="weather-updated">Opdateret ' + new Date().toLocaleTimeString('da-DK', { hour: '2-digit', minute: '2-digit' }) + '</div></div>';
 
       var tripStart = '2026-07-22', tripEnd = '2026-07-29';
-      var days = daily.time.map(function (dt, i) {
+      var forecastCutoff = '2026-07-30'; // vis ikke længere end dagen efter hjemrejse
+
+      // Filtrer dage: kun med gyldige data (undgår "0°/0°"-fejl på sidste dag),
+      // og cap på forecastCutoff.
+      var validIndices = daily.time.reduce(function (acc, dt, i) {
+        var tmax = daily.temperature_2m_max[i];
+        var tmin = daily.temperature_2m_min[i];
+        var hasData = tmax != null && tmin != null && !isNaN(tmax) && !isNaN(tmin);
+        if (hasData && dt <= forecastCutoff) acc.push(i);
+        return acc;
+      }, []);
+
+      var days = validIndices.map(function (i) {
+        var dt = daily.time[i];
         var dc = window.Weather.desc(daily.weather_code[i]);
         var dd = new Date(dt);
         var isTrip = dt >= tripStart && dt <= tripEnd;

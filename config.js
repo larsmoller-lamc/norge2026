@@ -8,12 +8,12 @@ window.APP_CONFIG = {
      Standard er Sinnes/Sirdal. Ret hvis I vil have et andet punkt. */
   location: {
     name: 'Sinnes, Sirdal',
-    lat: 58.906,
-    lon: 6.850
+    lat: 58.9297,
+    lon: 6.7407
   },
 
   /* Link til den fulde YR-side for stedet (vises som knap i vejr-sektionen).  */
-  yrUrl: 'https://www.yr.no/nb/v%C3%A6rvarsel/daglig-tabell/2-3138888/Norge/Rogaland/Sirdal/Sinnes',
+  yrUrl: 'https://www.yr.no/en/forecast/daily-table/1-17249/Norway/Agder/Sirdal/Sinnes',
 
   /* -------------------------------------------------------------------
      DELT LISTE (valgfrit, men anbefalet for hele familien)

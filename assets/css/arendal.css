@@ -1,0 +1,440 @@
+/* =====================================================================
+   arendal.css — Blå tema-overlay til arendal.html
+   Version: 2026-07-13-v1
+
+   Idé: Vi genbruger ALLE komponenter fra styles.css (day-hero, timeline,
+   attraction, meal-card, section-title, nav, hero osv.) og skifter kun
+   farvevariablerne. Sekundære komponenter (rute-strip, parking, beach)
+   er nye og defineres nederst.
+   ===================================================================== */
+
+.theme-blue {
+  /* Skov → dybe fjord-toner */
+  --forest:      #1e3a52;   /* dyb hav-blå — erstatter forest */
+  --forest-deep: #12283a;   /* næsten navy */
+  --pine:        #2b5471;   /* mellem blå — day-hero gradient nederst */
+  --moss:        #6b8a98;   /* støvet gråblå */
+
+  /* Fjord → livligere blå */
+  --fjord:       #1e3a52;   /* weather-now bruger denne */
+  --sky:         #4e7a95;
+
+  /* Rust → varm accent i turkis/petroleum */
+  --rust:        #0f7a8a;   /* accent-farven på section-em, activity-time, kicker */
+  --gold:        #e8b555;   /* behold gyldne detaljer i hero */
+
+  /* Familie-farver → varme accenter til de fem personer
+     genbruger fam-la / fam-gc / fam-cm / fam-ml til crew-cards */
+  --fam-la: #b9542b;  /* Lars — rust */
+  --fam-gc: #1e3a52;  /* Mette — hav */
+  --fam-cm: #d4a847;  /* Carl — guld */
+  --fam-ml: #4e7a95;  /* Frederik — himmel */
+
+  /* Ekstra: William */
+  --fam-w:  #6b8a98;
+}
+
+/* ===== HERO-BILLEDE =====
+   Overrider hero-billedet med Arendal-billedet fra visitsorlandet
+   (samme baggrundsfarve #142822 falder tilbage hvis billedet ikke loader) */
+.theme-blue .hero {
+  background: #0d1f2e;
+}
+.theme-blue .hero-photo {
+  background-image: url('https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/visitsorlandet/46556432805_489c96a50b_o_682f34ab-a487-4a52-b528-ed1d5855d351.jpg');
+  background-position: center 50%;
+}
+.theme-blue .hero-overlay {
+  background: linear-gradient(180deg,
+    rgba(13,31,46,0.65) 0%,
+    rgba(13,31,46,0.15) 32%,
+    rgba(13,31,46,0.35) 58%,
+    rgba(13,31,46,0.94) 100%);
+}
+.theme-blue .hero-eyebrow { color: var(--gold); }
+.theme-blue .hero h1 em { color: var(--gold); }
+
+/* Hero-top tilbagelink (erstatter flag-elementet) */
+.hero-back {
+  font-family: 'Fraunces', serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(243,237,224,0.85);
+  text-decoration: none;
+  border: 1px solid rgba(243,237,224,0.22);
+  padding: 6px 12px;
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+.hero-back:hover {
+  background: rgba(243,237,224,0.14);
+  color: var(--birch);
+}
+
+/* ===== SECTIONS ===== */
+.theme-blue.body,
+.theme-blue { background: var(--cream); }
+
+/* Countdown-området genbruges til rute-banner */
+.theme-blue .countdown {
+  background: var(--forest);
+  color: var(--birch);
+  padding: 20px 22px 28px;
+}
+.theme-blue .countdown::before {
+  background: radial-gradient(ellipse at center, rgba(232,181,85,0.1), transparent 70%);
+}
+.theme-blue .countdown-label {
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+/* ===== RUTE-STRIP (ny komponent) ===== */
+.route-strip {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 4px;
+}
+.route-node {
+  flex: 0 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  min-width: 60px;
+}
+.route-node::before {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--forest);
+  box-shadow: 0 0 0 2px var(--gold);
+  margin: 0 auto 10px;
+}
+.route-node:first-child::before,
+.route-node:last-child::before {
+  background: var(--birch);
+  box-shadow: 0 0 0 2px var(--birch);
+}
+.route-city {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--birch);
+  line-height: 1.1;
+}
+.route-date {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(243,237,224,0.7);
+  margin-top: 4px;
+}
+.route-line {
+  flex: 1 1 auto;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(243,237,224,0.4) 0 6px,
+    transparent 6px 12px
+  );
+  margin-top: 9px;
+  z-index: 1;
+  min-width: 20px;
+}
+
+/* ===== PARKING-LISTE (ny komponent, gener-genbruger info-card look) ===== */
+.parking-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.parking-item {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: center;
+}
+section.alt .parking-item { background: var(--cream); }
+.parking-badge {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--birch);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  padding: 4px;
+  flex-shrink: 0;
+}
+.parking-badge.recommended {
+  background: var(--gold);
+  color: var(--forest-deep);
+  box-shadow: 0 0 0 3px rgba(232,181,85,0.25);
+}
+.parking-info { min-width: 0; }
+.parking-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--forest);
+  line-height: 1.2;
+}
+.parking-name .parking-recommended-tag {
+  display: inline-block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: var(--forest-deep);
+  padding: 2px 8px;
+  border-radius: 100px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+.parking-desc {
+  font-size: 13px;
+  color: var(--char-soft);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+.parking-link {
+  flex-shrink: 0;
+  color: var(--rust);
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 6px 12px;
+  background: rgba(15,122,138,0.1);
+  border-radius: 100px;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.parking-link:hover {
+  background: var(--rust);
+  color: var(--birch);
+}
+
+/* ===== BEACH-LISTE (samme mønster som parking, men mindre kompakt) ===== */
+.beach-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+.beach-item {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-soft);
+}
+section.alt .beach-item { background: var(--cream); }
+.beach-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.beach-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--forest);
+}
+.beach-distance {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rust);
+  background: rgba(15,122,138,0.1);
+  padding: 3px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.beach-type {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--rust);
+  margin-bottom: 6px;
+}
+.beach-desc {
+  font-size: 14px;
+  color: var(--char-soft);
+  line-height: 1.5;
+}
+.beach-link {
+  display: inline-flex;
+  margin-top: 10px;
+  color: var(--rust);
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* ===== CREW (5 personer i stedet for de 4 familier) ===== */
+.crew {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+.crew-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 18px 14px;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+section.alt .crew-card { background: var(--cream); }
+.crew-icon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--birch);
+  margin: 0 auto 12px;
+}
+.crew-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--forest);
+}
+.crew-role {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--rust);
+  margin-top: 3px;
+}
+.crew-icon.ci-lars { background: var(--fam-la); }
+.crew-icon.ci-mette { background: var(--fam-gc); }
+.crew-icon.ci-carl { background: var(--fam-cm); color: var(--forest-deep); }
+.crew-icon.ci-frederik { background: var(--fam-ml); }
+.crew-icon.ci-william { background: var(--fam-w); }
+
+/* ===== KORT (map-wrap) ===== */
+.map-wrap {
+  margin-top: 18px;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  aspect-ratio: 16 / 10;
+  background: var(--birch);
+}
+.map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ===== ADDRESS-KORT (allerede defineret i styles.css? sikkerhedstjek) ===== */
+.address-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-soft);
+}
+section.alt .address-card { background: var(--cream); }
+.address-info strong {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--forest);
+  display: block;
+  margin-bottom: 3px;
+}
+.address-info span {
+  font-size: 13px;
+  color: var(--char-soft);
+}
+.address-action {
+  color: var(--rust);
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 8px 14px;
+  background: rgba(15,122,138,0.1);
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+.address-action:hover {
+  background: var(--rust);
+  color: var(--birch);
+}
+
+/* ===== SVG-baggrunde til attractions (art-classes)
+   Mapper de eksisterende art-* klasser til blå gradienter ===== */
+.theme-blue .art-mountain { background: linear-gradient(180deg, #8fb4c8 0%, #4e7a95 50%, #1e3a52 100%); }
+.theme-blue .art-fjord    { background: linear-gradient(180deg, #a4c5d6 0%, #4e7a95 60%, #1e3a52 100%); }
+.theme-blue .art-forest   { background: linear-gradient(180deg, #a4b59a 0%, #6e8c72 50%, #2b5471 100%); }
+.theme-blue .art-city     { background: linear-gradient(180deg, #d6cbb8 0%, #a89476 50%, #5e4b34 100%); }
+.theme-blue .art-water    { background: linear-gradient(180deg, #b9d4dc 0%, #6b8a98 60%, #1e3a52 100%); }
+.theme-blue .art-rock     { background: linear-gradient(180deg, #c5b8a4 0%, #8a7560 50%, #4a3f30 100%); }
+.theme-blue .art-museum   { background: linear-gradient(180deg, #c9b98a 0%, #8a7960 50%, #4a4030 100%); }
+.theme-blue .art-lighthouse { background: linear-gradient(180deg, #a4c5d6 0%, #4e7a95 40%, #12283a 100%); }
+.theme-blue .art-street   { background: linear-gradient(180deg, #d6c9b0 0%, #a08a6a 50%, #6a5540 100%); }
+
+/* ===== ACTIVITY-BULLET: gør prik-markøren blå/petroleum i stedet for rust ===== */
+.theme-blue .activity::before {
+  background: var(--rust);
+  box-shadow: 0 0 0 1.5px var(--rust);
+}
+
+/* ===== MOBILE: kompakt rute-strip på små skærme ===== */
+@media (max-width: 480px) {
+  .route-strip {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 8px 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .route-strip::-webkit-scrollbar { display: none; }
+  .route-node { min-width: 68px; }
+  .route-line { min-width: 24px; }
+  .route-city { font-size: 13px; }
+  .route-date { font-size: 9px; }
+
+  .parking-item {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px 12px;
+  }
+  .parking-link {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}

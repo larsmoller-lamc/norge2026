@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Rød baggrund (Norges flagfarve: PMS 200 ≈ #BA0C2F) -->
+  <rect width="512" height="512" rx="96" ry="96" fill="#BA0C2F"/>
+  
+  <!-- Hvidt kors -->
+  <!-- Horisontal hvid stribe -->
+  <rect x="0" y="192" width="512" height="128" fill="#FFFFFF"/>
+  <!-- Vertikal hvid stribe (forskudt til venstre som ægte norsk flag) -->
+  <rect x="160" y="0" width="128" height="512" fill="#FFFFFF"/>
+  
+  <!-- Blåt kors -->
+  <!-- Horisontal blå stribe -->
+  <rect x="0" y="224" width="512" height="64" fill="#00205B"/>
+  <!-- Vertikal blå stribe -->
+  <rect x="192" y="0" width="64" height="512" fill="#00205B"/>
+</svg>
